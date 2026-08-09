@@ -10,6 +10,6 @@ if four == 0:
         else:
             print("not a leap year")
     else:
-        print("not a leap year")
+        print("The year "+ str(leap) + " is a leap year")
 else:
     print ("not a leap year")
