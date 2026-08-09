@@ -3,9 +3,6 @@ leap = int(input("please enter the year? "))
 four = int(leap % 4)
 hun = int(leap % 100)
 f_hun=int(leap % 400)
-print (four)
-print(hun)
-print(f_hun)
 if four == 0:
     if hun == 0:
         if f_hun == 0:
