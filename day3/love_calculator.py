@@ -38,7 +38,15 @@ if "v" in another:
 if "e" in another:
     m += 1
 
-print (f"ur love number is {str(n) + str(m)}")
+score = str(n) + str(m)
+if int(score) < 10 or int(score) > 90 :
+    print(f"ur score got {score} u guys go like coke and mentos")
+elif int(score) > 40 and int(score) < 50:
+    print(f"ur score got {score} u are alright together") 
+else:
+    print(f"ur score got {score}")
+
+
 
 
 
