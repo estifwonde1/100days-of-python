@@ -21,3 +21,13 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 *******************************************************************************
 ''')
 print("welcome to the treasure island where u find all u want")
+print("ur mission is to find the treasure")
+
+move= input("You are at the cross road where do wanna go? , Type left or Right").lower()
+if move == "left":
+    eng = input("You come to lake. There is an island in the middle of the lake. Type wait to wait for a boat. Type swim to swim accross").lower()
+    if eng == "wait":
+        color =input("You arrived at the island unharmed. There is a house with 3 doors. One red , one yellow and one blue , Which colour do you choose").lower()
+        if color == "blue":
+            print ("You entered a room of beasts. Game over")
+
