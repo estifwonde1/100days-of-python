@@ -5,10 +5,12 @@ line_3 = [" "," "," "]
 
 map = [line_1,line_2,line_3]
 print("hiding ur treasure map , X marks the spot")
-position=input("enter the ").lower()
-letter = ["a","b","c"]
-row = po
-column = row.len()-1
+position=input().lower()
+letter = position[0]
+abd = ['a','b','c']
+letters_index
+
+
 
 map[int(row)][int(column)] = "X"
 
