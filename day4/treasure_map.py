@@ -8,11 +8,11 @@ print("hiding ur treasure map , X marks the spot")
 position=input().lower()
 letter = position[0]
 abd = ['a','b','c']
-letters_index = abd.index(letter)
+letter_index = abd.index(letter)
+num_index = int(position[1]) -1
 
 
 
-
-map[int(row)][int(column)] = "X"
+map[int(letter_index)][int(num_index)] = "X"
 
 print(f"{line_1}\n{line_2}\n{line_3}")
