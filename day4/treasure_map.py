@@ -8,7 +8,8 @@ print("hiding ur treasure map , X marks the spot")
 position=input().lower()
 letter = position[0]
 abd = ['a','b','c']
-letters_index
+letters_index = abd.index(letter)
+
 
 
 
