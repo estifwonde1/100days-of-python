@@ -1,15 +1,10 @@
 print("welcome to the average height calulator")
-students_height = []
-add = "yes"
-
-while add == "yes":
-    n = int(input("add the the height of ur students"))
-    add = input("wanna add more yes or no").lower()
-    students_height.append(n)
-
-summing = 0
-for student in students_height:
-    summing += int(student)
+students_height = input().split()
+sum = 0
+for n in range (0, len(students_height)):
+    students_height[n] =int(students_height[n])
+    sum += students_height[n]
     le = len(students_height)
-    av = summing/le
-print (av)
+    av = sum/le
+print(av)
+    
