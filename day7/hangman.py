@@ -1,0 +1,1 @@
+print("Hangman where ur mistake costs a little man's life")
