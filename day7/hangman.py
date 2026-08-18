@@ -6,7 +6,6 @@ word_list = [
     "kitten", "lemon", "mountain", "needle", "ocean", 
     "python", "queen", "river", "shadow", "turtle"
 ]
-right = []
 victim = [
 r'''
       _______
@@ -87,19 +86,15 @@ while trial <= len(victim)-1:
                 splited[i] = guess
         print(splited)                          
     else:
-        right.append(ha[n])
         print(victim[n])
         n += 1
-        trial +=1
-        print(right)
-        
-   
+        trial +=1   
     if "_" not in splited:
         print ("u won")
         break
 if trial == 6:
     print(" u hanged an innocent man")
-    print(victim[5])
+   
             
 
                 
