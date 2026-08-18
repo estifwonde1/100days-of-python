@@ -7,7 +7,7 @@ word_list = [
     "python", "queen", "river", "shadow", "turtle"
 ]
 right = []
-vitim = r'''
+victim = r'''
       _______
      |/      |
      |      (_)
@@ -17,13 +17,33 @@ vitim = r'''
      |
     _|___
 '''
-word = "elephant"
-splited = list(word)
+word = list(random.choice(word_list))
+print(word)
+splited = word.copy()
+size = len(splited)
+for i in range(0,size):
+    splited[i] = "_"
 print(splited)
+print(word)
+
+
+ha = list("hangman")
+so = len(ha)
 
 guess = input("guess a letter \n")
+n = 0
+if guess in word:
+    for i in range(0,size):
+        if word[i] == guess:
+            splited[i] = guess
+else:
+    right.append(ha[n])
+    n += 1
+    print(right)
+        
 
-for letter in splited:
-    if guess == letter:
-        right.append(guess)
-        print(right)
+                
+            
+    
+      
+print(splited)
