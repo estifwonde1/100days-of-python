@@ -7,7 +7,58 @@ word_list = [
     "python", "queen", "river", "shadow", "turtle"
 ]
 right = []
-victim = r'''
+victim = [
+r'''
+      _______
+     |/      |
+     |      
+     |     
+     |      
+     |      
+     |
+    _|___
+''',
+r'''
+      _______
+     |/      |
+     |      (_)
+     |      
+     |      
+     |      
+     |
+    _|___
+''',
+r'''
+      _______
+     |/      |
+     |      (_)
+     |      \|/
+     |       
+     |      
+     |
+    _|___
+''',
+r'''
+      _______
+     |/      |
+     |      (_)
+     |      \|/
+     |       |
+     |      
+     |
+    _|___
+''',
+r'''
+      _______
+     |/      |
+     |      (_)
+     |      \|/
+     |       |
+     |      / 
+     |
+    _|___
+''',
+r'''
       _______
      |/      |
      |      (_)
@@ -16,7 +67,7 @@ victim = r'''
      |      / \
      |
     _|___
-'''
+''']
 word = list(random.choice(word_list))
 print(word)
 splited = word.copy()
@@ -26,28 +77,29 @@ for i in range(0,size):
 print(splited)
 print(word)
 ha = list("hangman")
-guess = input("guess a letter \n")
 trial = 0
 n = 0
-while trial <= 6:
+while trial <= len(victim)-1:
     guess = input("guess a letter \n")
     if guess in word:
         for i in range(0,size):
             if word[i] == guess:
                 splited[i] = guess
-                print(splited)                          
+        print(splited)                          
     else:
         right.append(ha[n])
+        print(victim[n])
         n += 1
         trial +=1
         print(right)
+        
    
     if "_" not in splited:
         print ("u won")
         break
-    if trial == 7:
-        print(" u hanged an innocent man")
-        print(victim)
+if trial == 6:
+    print(" u hanged an innocent man")
+    print(victim[5])
             
 
                 
