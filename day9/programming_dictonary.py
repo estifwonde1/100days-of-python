@@ -5,3 +5,7 @@ dictionary = {
     "error":" booo"
 }
 print(dictionary)
+travel_log ={
+    "cities_visited": {"france" :["paris","lagos"]}
+}
+print (travel_log)
