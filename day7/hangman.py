@@ -84,11 +84,12 @@ while trial <= len(victim)-1:
         for i in range(0,size):
             if word[i] == guess:
                 splited[i] = guess
-        print(splited)                          
+        print(splited)                                  
     else:
         print(victim[n])
         n += 1
-        trial +=1   
+        trial +=1 
+         
     if "_" not in splited:
         print ("u won")
         break
