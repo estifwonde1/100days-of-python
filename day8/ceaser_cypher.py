@@ -1,24 +1,22 @@
 import string
 letters = list(string.ascii_lowercase)
 
+direction = input("welcome to the mysterious ceasercypher do u wanna encode or decode \n ").lower()
+message = input("what is the word or message \n").lower()
+shift = int(input("what is the shift number\n"))
 
-print (letters)
-# word = list(input("enter the word u want to be cyphered by the magician \n").lower())
+def encode(message,shift):
+    tar = list(message)
+    m = shift
+    for n in range(0,len(tar)-1):
+        tar[n]=letters[m]
+        m += shift
+        print(tar)
+encode(message,shift)
 
-shift = int(input("by how much \n"))
-n = 0
 
 
-cyphered = []
-def encode(shift):
-    for m in range (0,len(letters),shift):
-          print(letters[m])
-        
-        
-    # print (word)
-    
 
-encode(shift)
 
 
     
