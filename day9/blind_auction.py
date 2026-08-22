@@ -31,14 +31,11 @@ while another == "yes":
         })
     another = input("is another person bidding\n").lower()
 n = bid_list[0]["Bid"]
+m = bid_list[0]["Name"]
 for i in range (0,len(bid_list)):
     if n <= bid_list[i]["Bid"]:
         n = bid_list[i]["Bid"]
-print(f"and the winner is the person who bid this amount{n}")
+        m = bid_list[i]["Name"]
+print(f"and the winner is {m} who bid this crazy amount {n}")
     
-    
-
-
-
-print(bid_list)
 
