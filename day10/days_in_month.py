@@ -22,7 +22,7 @@ def days_in_month(year , month):
         return month_days[indie]
     return month_days[indie]
 year = int(input("please enter the year"))
-month = int(input("enter the month as a number"))
+month = int(input("enter the month as a number")) 
 
 
 print(days_in_month(year,month)) 
