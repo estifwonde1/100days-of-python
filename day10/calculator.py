@@ -28,51 +28,44 @@ print(r'''
 def calculator():
     con = True
     while con:
-        num1 = float(input("enter the first number \n"))
-        operator = (input("+\n-\n*\n/\n"))
+        def add(num1,num2):
+            return num1 + num2
+        def substract(num1,num2):
+            return num1 - num2
+        def multiply(num1, num2):
+            return num1 * num2
+        def divide (num1,num2):
+            return num1 / num2
+        num1 = float(input("enter the first number \n"))        
+        def operators():
+            operator = {
+            "+":add,
+            "-":substract,
+            "*":multiply,
+            "/":divide,
+        }
+            for symbol in operator:
+                print(symbol)
+            symbols = input("enter operator from the above")
+            fun = operator[symbols]
+            return fun
+        so = operators()
         num2 = float(input("enter the second number\n"))
-        if operator == "+":
-            total = num1 + num2
-            print(f"the value is {total}")
-        elif operator == "-":
-            total = num1 - num2
-            print(f"the value is {total}")
-        elif operator == "*":
-            total = num1 * num2
-            print(f"the value is {total}")
-        elif operator == "/":
-            total = num1 / num2
-            print(f"the value is {total}")
-        else:
-            print("invalid input")
+        
+        ans = so(num1,num2)
+        print (ans)
         que =input("wanna continue from total value or want new : yes or no\n").lower()
         if que != "yes":
             con = False
-        else:
+        else :
             while que == "yes":
-                operator =(input("+\n-\n*\n/\n"))
-                num2 =float(input("enter the second number\n"))
-                if operator == "+":
-                    total = total + num2
-                    print (f"the value is {total}")
-                elif operator == "-":
-                    total = total - num2
-                    print(f"the value is {total}")
-                elif operator == "*":
-                    total = total * num2
-                    print(f"the value is {total}")
-                elif operator == "/":
-                    total = total / num2
-                    print(f"the value is {total}")
-                else:
-                    print("invalid input")
+                so = operators()
+                num3 = float(input("enter the next number\n"))              
+                ans = so(ans,num3)
+                print(ans)
                 que =input("wanna continue from total value or want new : yes or no\n").lower()
             if que != "yes":
                 con = False
-            
-
-
-
 calculator()
 
 
