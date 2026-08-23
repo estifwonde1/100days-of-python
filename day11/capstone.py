@@ -17,13 +17,50 @@ print(
 
     '''
 )
-card_numbers = [11,2,3,4,5,6,7,8,9,10,10,10,10]
-computer = []
-player = []
-n = 0
-while n < 2:
-    computer.append(random.choice(card_numbers))
-    player.append(random.choice(card_numbers))
-    n += 1
-print(computer)
-print(player)
+
+def deal_card():
+    card_numbers = [11,2,3,4,5,6,7,8,9,10,10,10,10]
+    computer = []
+    player = []
+    n = 0
+    player_total = 0
+    computer_total = 0
+    m = 2
+    while n < 2:
+        computer.append(random.choice(card_numbers))
+        player.append(random.choice(card_numbers))
+        player_total += player[n] 
+        computer_total += computer[n]
+        n += 1
+        
+    print(computer[0])
+    print(player)
+    deal = input("deal or stand\n").lower()
+    while deal == "deal":          
+        if player_total > 21:
+            print ("bust u lost")
+            print(player)
+            print(player_total)
+            break
+            
+        else:
+            player.append(random.choice(card_numbers))
+            print(player)
+            deal = input("deal or stand\n").lower()
+            player_total += player[m]
+            m += 1
+       
+
+
+        
+    if deal == "stand":
+        print(computer)
+        print(player)
+    if player_total > computer_total:
+        print ("u won")
+    elif player_total < computer_total:
+        print("u lost")
+    else:
+        print ("draw")
+deal_card()
+
