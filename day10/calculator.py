@@ -25,47 +25,42 @@ print(r'''
 |_____________________|
 
 ''')
+def add(num1,num2):
+    return num1 + num2
+def substract(num1,num2):
+    return num1 - num2
+def multiply(num1, num2):
+    return num1 * num2
+def divide (num1,num2):
+    if num2 == 0:
+        return "cannot devide by 0"
+    return num1 / num2
+
+operator = {
+    "+":add,
+    "-":substract,
+    "*":multiply,
+    "/":divide,
+}
 def calculator():
+    num1 = float(input("enter the first number \n"))  
     con = True
+    for symbol in operator:
+        print (symbol)
     while con:
-        def add(num1,num2):
-            return num1 + num2
-        def substract(num1,num2):
-            return num1 - num2
-        def multiply(num1, num2):
-            return num1 * num2
-        def divide (num1,num2):
-            return num1 / num2
-        num1 = float(input("enter the first number \n"))        
-        def operators():
-            operator = {
-            "+":add,
-            "-":substract,
-            "*":multiply,
-            "/":divide,
-        }
-            for symbol in operator:
-                print(symbol)
-            symbols = input("enter operator from the above")
-            fun = operator[symbols]
-            return fun
-        so = operators()
-        num2 = float(input("enter the second number\n"))
-        
-        ans = so(num1,num2)
+        opa = (input("pick an operation"))
+        num2 = float(input("enter the second number\n"))      
+        sol = operator[opa]
+        ans = sol(num1,num2)
         print (ans)
         que =input("wanna continue from total value or want new : yes or no\n").lower()
-        if que != "yes":
-            con = False
+        if que == "yes":
+            num1 = ans
         else :
-            while que == "yes":
-                so = operators()
-                num3 = float(input("enter the next number\n"))              
-                ans = so(ans,num3)
-                print(ans)
-                que =input("wanna continue from total value or want new : yes or no\n").lower()
-            if que != "yes":
-                con = False
+            con = False
+            calculator()
+    
+      
 calculator()
 
 
