@@ -17,3 +17,13 @@ print(
 
     '''
 )
+card_numbers = [11,2,3,4,5,6,7,8,9,10,10,10,10]
+computer = []
+player = []
+n = 0
+while n < 2:
+    computer.append(random.choice(card_numbers))
+    player.append(random.choice(card_numbers))
+    n += 1
+print(computer)
+print(player)
