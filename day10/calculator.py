@@ -30,7 +30,7 @@ def calculator():
     while con:
         num1 = float(input("enter the first number \n"))
         operator = (input("+\n-\n*\n/\n"))
-        num2 = float(input("enter the second number"))
+        num2 = float(input("enter the second number\n"))
         if operator == "+":
             total = num1 + num2
             print(f"the value is {total}")
@@ -41,13 +41,38 @@ def calculator():
             total = num1 * num2
             print(f"the value is {total}")
         elif operator == "/":
-            total = num1 * num2
+            total = num1 / num2
             print(f"the value is {total}")
         else:
             print("invalid input")
         que =input("wanna continue from total value or want new : yes or no\n").lower()
         if que != "yes":
             con = False
+        else:
+            while que == "yes":
+                operator =(input("+\n-\n*\n/\n"))
+                num2 =float(input("enter the second number\n"))
+                if operator == "+":
+                    total = total + num2
+                    print (f"the value is {total}")
+                elif operator == "-":
+                    total = total - num2
+                    print(f"the value is {total}")
+                elif operator == "*":
+                    total = total * num2
+                    print(f"the value is {total}")
+                elif operator == "/":
+                    total = total / num2
+                    print(f"the value is {total}")
+                else:
+                    print("invalid input")
+                que =input("wanna continue from total value or want new : yes or no\n").lower()
+            if que != "yes":
+                con = False
+            
+
+
+
 calculator()
 
 
