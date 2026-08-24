@@ -49,14 +49,12 @@ def deal_card():
             deal = input("deal or stand\n").lower()
             player_total += player[m]
             m += 1
-       
-
-
-        
+               
     if deal == "stand":
         print(computer)
         print(player)
-    if player_total > computer_total:
+    if player_total > computer_total and player_total <= 21:
+        print(computer)
         print ("u won")
     elif player_total < computer_total:
         print("u lost")
