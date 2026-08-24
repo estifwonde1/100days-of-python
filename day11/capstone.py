@@ -46,10 +46,14 @@ def deal_card():
         else:
             player.append(random.choice(card_numbers))
             print(player)
-            deal = input("deal or stand\n").lower()
             player_total += player[m]
+            if player_total > 21:
+                print("bust")
+                break   
+            deal = input("deal or stand\n").lower()
+            
             m += 1
-               
+        
     if deal == "stand":
         print(computer)
         print(player)
@@ -58,7 +62,7 @@ def deal_card():
         print ("u won")
     elif player_total < computer_total:
         print("u lost")
-    else:
+    elif player_total == computer_total:
         print ("draw")
 deal_card()
 
