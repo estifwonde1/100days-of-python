@@ -1,11 +1,15 @@
 import random
 print ("Welcome to The Number guessing game")
 print("I am thinking of a number between 1 and 100")
-tar = random.randint(1,100)
+
 def guess_engine(n):
     while n > 0:
         print(f"you have {n} attempts guess the right number")
-        guess = int(input("Make a guess: "))
+        try:
+            guess = int(input("Make a guess: "))
+        except ValueError:
+            print("dumb dumb enter a number what is wrong with you")
+            continue
         if guess < tar:
             print("too low")
         elif guess > tar:
@@ -15,12 +19,12 @@ def guess_engine(n):
             break
         n -= 1
     if n == 0:
-        print("womp womp u lost")
+        print(f"womp womp u lost the number was {tar}")
 
-play = True
- 
+play = True 
 while play:
     level = input("Choose the level difficulty : easy or hard \n").lower()
+    tar = random.randint(1,100)
     if level == "easy":
         guess_engine(10)
     elif level == "hard":
