@@ -17,65 +17,63 @@ print(
 
     '''
 )
+def calculate_score(cards):
+    score = sum(cards)
+    if score > 21 and 11 in cards:
+        cards.remove(11)
+        cards.append(1)
+        score = sum(cards)
+    return score
+
 
 def deal_card():
     card_numbers = [11,2,3,4,5,6,7,8,9,10,10,10,10]
-    computer = []
-    player = []
-    n = 0
-    player_total = 0
-    computer_total = 0
-    m = 2
-    while n < 2:         
-        computer.append(random.choice(card_numbers))
-        player.append(random.choice(card_numbers))
-        player_total += player[n] 
-        computer_total += computer[n] 
-        n += 1
-    if 11 in player and player_total > 21:
-        player.remove(11)
-        player.append(1)
-        print(player)
-    if 11 in computer and computer_total > 21:
-        computer.remove(11)
-        computer.append(1)
-        print(computer)        
+    computer = [random.choice(card_numbers),random.choice(card_numbers)]
+    player = [random.choice(card_numbers),random.choice(card_numbers)]
+    
+       
     print(computer[0])
     print(player)
-    deal = input("deal or stand\n").lower()
-    while deal == "deal":              
-        if player_total > 21:
-            print ("bust u lost")
-            print(player)
-            print(player_total)
-            break          
-        else:
-            player.append(random.choice(card_numbers))
-            print(player)
-            player_total += player[m]
-            if player_total > 21:
-                print("bust")
-                break   
-            deal = input("deal or stand\n").lower()            
-            m += 1       
-    if deal == "stand":
-        while computer_total <= 14:
-            computer.append(random.choice(card_numbers))
-            computer_total += computer[n]
-            n += 1
-            if computer_total >21:
-                break
-        print(computer)
+    def show_score():
         print(player)
-    if player_total > computer_total and player_total <= 21:
         print(computer)
-        print ("u won")
-    elif player_total < computer_total and computer_total <= 21:
-        print("u lost")
-    elif player_total < computer_total:
-        print("u won")
-    elif player_total == computer_total:
-        print ("draw")    
+    isgame_over = False
+    while not isgame_over:
+        player_score = calculate_score(player)
+        if player_score >= 21:
+            break
+        deal = input("deal or stand \n").lower()
+        if deal == "deal":
+            player.append(random.choice(card_numbers))
+            player_score = calculate_score(player)
+            
+            print(player)           
+        else:
+            isgame_over = True
+    player_score = calculate_score(player)
+    computer_score = calculate_score(computer)
+    
+    if player_score <= 21:
+        while computer_score < 14:
+            computer.append(random.choice(card_number))
+    computer_score = calculate_score(computer)
+
+
+    if player_score > 21:
+        show_score()
+        print("bust u went over 21")
+    elif computer_score > 21:
+        show_score()
+        print("u win computer went over 21")
+    elif player_score > computer_score:
+        show_score()
+        print(" u won")
+    elif player_score < computer_score:
+        show_score()      
+        print(" u lost sucka")
+    else:
+        show_score()
+        print("it's a draw")  
 con = True
 while con:
     deal_card()
