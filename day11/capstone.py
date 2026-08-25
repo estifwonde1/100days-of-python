@@ -73,6 +73,10 @@ def deal_card():
         print("u won")
     elif player_total == computer_total:
         print ("draw")
+    command = (card_numbers[0] = 1)
+   
+
+
     
 deal_card()
 
