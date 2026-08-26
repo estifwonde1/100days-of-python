@@ -1,4 +1,5 @@
 import random
+
 print("Hangman where ur mistake costs a little man's life")
 word_list = [
     "apple", "banana", "cherry", "desktop", "elephant", 
@@ -71,7 +72,7 @@ word = list(random.choice(word_list))
 print(word)
 splited = word.copy()
 size = len(splited)
-for i in range(0,size):
+for i in range(size):
     splited[i] = "_"
 print(splited)
 print(word)
@@ -81,7 +82,7 @@ n = 0
 while trial <= len(victim)-1:
     guess = input("guess a letter \n")
     if guess in word:
-        for i in range(0,size):
+        for i in range(size):
             if word[i] == guess:
                 splited[i] = guess
         print(splited)                                  

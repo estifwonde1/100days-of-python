@@ -1,4 +1,5 @@
 import math
+
 print("welcome to the paint are calculator")
 height = int(input("enter the height\n"))
 width = int(input("enter the width\n"))

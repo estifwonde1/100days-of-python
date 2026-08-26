@@ -1,4 +1,5 @@
 import random
+
 print ("Welcome to The Number guessing game")
 print("I am thinking of a number between 1 and 100")
 

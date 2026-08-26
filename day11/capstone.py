@@ -1,4 +1,5 @@
 import random
+
 print(
     r'''	
 		
@@ -55,7 +56,7 @@ def deal_card():
     
     if player_score <= 21:
         while computer_score < 14:
-            computer.append(random.choice(card_number))
+            computer.append(random.choice(card_numbers))
     computer_score = calculate_score(computer)
 
 

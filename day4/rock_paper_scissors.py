@@ -1,4 +1,5 @@
 import random
+
 print("the fantastic game of rock paper and scissor")
 random_num = random.randint(1,3)
 wordfy = str(random_num)

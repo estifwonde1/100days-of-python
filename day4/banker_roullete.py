@@ -1,4 +1,5 @@
 import random
+
 print("Welcome to the banker roullete")
 
 names = []

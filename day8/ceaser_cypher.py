@@ -1,4 +1,5 @@
 import string
+
 print(r'''
  ______  ______  ______  ______  ______  ______
  / ____/ / ____/ / ____/ / ____/ / ____/ / __  \
@@ -47,8 +48,8 @@ def decode(message,shift):
 
 if direction  == "encode":
     message = input("what is the word or message \n").lower()
-    encode(message,shift)
     shift = int(input("what is the shift number\n"))
+    encode(message,shift)    
 elif direction  == "decode":
     message = input("what is the word or message \n").lower()
     shift = int(input("what is the shift number\n"))

@@ -1,3 +1,5 @@
+import sys
+
 print("Welcome to PythonPizza")
 order = input("what kinda pizza do u want? 'S' , 'M' , 'L'")
 bill = 0
@@ -13,7 +15,7 @@ elif order == 'L':
     print("The bill for Large is $25")        
 else:
     print("we don't serve that we only serve pizza s , m and l")
-    exit()
+    sys.exit()
 add_on = input("would you like Pepperoni? Y or N")
 cheese = input(" would you like extra cheese? Y or N")
 if add_on == 'Y':

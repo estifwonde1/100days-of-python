@@ -31,7 +31,7 @@ def auction():
             bidding_open = False
     n = bid_list[0]["Bid"]
     m = bid_list[0]["Name"]
-    for i in range (0,len(bid_list)):
+    for i in range (len(bid_list)):
         if n <= bid_list[i]["Bid"]:
             n = bid_list[i]["Bid"]
             m = bid_list[i]["Name"]

@@ -1,4 +1,3 @@
-from random import randint
 
 def my_function():
     for i in range (1,21):

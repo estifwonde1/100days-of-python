@@ -7,12 +7,12 @@ scores = {
     "Nevile":62,
 }
 stu ={}
-for key in scores:
-    if scores[key] >= 91:
+for key, score in scores.item():
+    if scores >= 91:
         stu[key] = "Outstanding"
-    elif scores[key] >= 81:
+    elif scores >= 81:
         stu[key] = "Exceeds expectation"
-    elif scores[key] >= 71:
+    elif scores>= 71:
         stu[key] = "Acceptable"
     else:
         stu[key] = "Fail"

@@ -1,6 +1,8 @@
-from game_data import data
-import art
 import random
+
+import art
+from game_data import data
+
 print(art.logo)
 def ask_to_play():
     ask = input("want to play again: yes or no \n").lower()
@@ -42,7 +44,6 @@ def main_game():
                     again = False
             else:
                 print("invalid input please enter higher or lower")
-                continue
-                    
+                continue                    
         playing = ask_to_play()
 main_game()
