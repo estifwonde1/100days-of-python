@@ -1,0 +1,7 @@
+from random import randint
+
+def my_function():
+    for i in range (1,21):
+        if i == 20:
+            print("u got it")
+my_function()
