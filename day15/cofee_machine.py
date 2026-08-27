@@ -24,6 +24,9 @@ price_tag ={
     "latte" : 4.50,
     "cappuccino" : 5.40
 }
+def process_coin(quarter,dime,nickel,penny):
+    paid = (currency_value["quarter"] * quarter)+(currency_value["dime"]+ dime) + (currency_value["nickel"] * nickel) + (currency_value["penny"] + penny)
+    return paid
 
 
 def make_latte():
@@ -67,6 +70,7 @@ def refill():
 
 
 if order == "espresso":
+    
     make_espresso()
 #am in progress am understanding the jist of it
 
