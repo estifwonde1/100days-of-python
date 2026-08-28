@@ -16,7 +16,7 @@ print(f"water:{water}\nmilk:{milk}\ncoffee:{Coffee}\nMoney:{Money}")
 currency_value = {
     "quarter" : 0.25,
     "dime" : 0.10,
-    "nickel": 0.5,
+    "nickel": 0.05,
     "penny":0.01,
 }          
 price_tag ={
@@ -25,7 +25,7 @@ price_tag ={
     "cappuccino" : 5.40
 }
 def process_coin(quarter,dime,nickel,penny):
-    paid = (currency_value["quarter"] * quarter)+(currency_value["dime"]+ dime) + (currency_value["nickel"] * nickel) + (currency_value["penny"] + penny)
+    paid = (currency_value["quarter"] * quarter)+(currency_value["dime"]* dime) + (currency_value["nickel"] * nickel) + (currency_value["penny"] * penny)
     return paid
 def not_sufficent():
     if water < 200:
