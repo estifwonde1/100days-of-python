@@ -39,7 +39,6 @@ def make_latte():
     Coffee -= 24
     Money += 2.42
     print ("here is ur latte")
-    print(f"water:{water}\nmilk:{milk}\ncoffee:{Coffee}\nMoney:{Money}")
 def make_espresso():
     global water
     global Coffee
@@ -65,8 +64,14 @@ def refill():
     water += 300
     milk += 100
     Coffee += 100
+def report():
+    print(f"water: {water}\nmilk:{milk}\ncoffee:{Coffee}\nMoney:{Money}")
 
 order =input("what would you like? (espresso/latte/cappuccino)\n")
+if order == "report":
+    report()
+elif order == "refill":
+    refill()
 print("please insert coins:")
 quarter = int(input("How many quartes: "))
 dime = int(input("How many dimes: "))
