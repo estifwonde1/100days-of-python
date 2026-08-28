@@ -6,9 +6,9 @@ Yb      Yb   dP 88""   88""   88""   88""     88YbdP88  dP__Yb  Yb      888888 8
 ''')
 
 
-water = 300
-milk = 200
-Coffee = 100
+water = 1000
+milk = 1000
+Coffee = 1000
 Money = 0
 print(f"water:{water}\nmilk:{milk}\ncoffee:{Coffee}\nMoney:{Money}")
 
@@ -27,36 +27,48 @@ price_tag ={
 def process_coin(quarter,dime,nickel,penny):
     paid = (currency_value["quarter"] * quarter)+(currency_value["dime"]+ dime) + (currency_value["nickel"] * nickel) + (currency_value["penny"] + penny)
     return paid
-
+def not_sufficent():
+    if water < 200:
+        print("not sufficent supply")
+    if milk < 100:
+        print("not sufficient supply")
+    if Coffee < 100:
+        print("not sufficent supply")
 
 def make_latte():
     global water
     global milk
     global Coffee
     global Money
-    water -= 200
-    milk -= 50
-    Coffee -= 24
-    Money += 2.42
-    print ("here is ur latte")
+    while not not_sufficent():
+        water -= 200
+        milk -= 50
+        Coffee -= 24
+        Money += 2.42
+        print ("here is ur latte")
+        break
 def make_espresso():
     global water
     global Coffee
     global Money
-    water -= 100
-    Coffee -= 15
-    Money += 4.50
-    print ("here is ur espresso")
+    while not not_sufficent():
+        water -= 100
+        Coffee -= 15
+        Money += 4.50
+        print ("here is ur espresso")
+        break
 def make_cappucino():
     global water
     global milk
     global Coffee
     global Money
-    water -= 36 
-    milk -= 100
-    Coffee -= 18
-    Money += 5.40
-    print ("here is ur cappuccino")
+    while not not_sufficent():
+        water -= 36 
+        milk -= 100
+        Coffee -= 18
+        Money += 5.40
+        print ("here is ur cappuccino")
+        break
 def refill():
     global water
     global milk
@@ -64,6 +76,7 @@ def refill():
     water += 300
     milk += 100
     Coffee += 100
+    
 def report():
     print(f"water: {water}\nmilk:{milk}\ncoffee:{Coffee}\nMoney:{Money}")
 
@@ -72,6 +85,7 @@ if order == "report":
     report()
 elif order == "refill":
     refill()
+
 print("please insert coins:")
 quarter = int(input("How many quartes: "))
 dime = int(input("How many dimes: "))
