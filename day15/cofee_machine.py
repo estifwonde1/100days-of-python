@@ -46,7 +46,8 @@ def make_latte():
         Coffee -= 24
         Money += 2.42
         print ("here is ur latte")
-        break
+        return True
+       
 def make_espresso():
     global water
     global Coffee
@@ -56,7 +57,8 @@ def make_espresso():
         Coffee -= 15
         Money += 4.50
         print ("here is ur espresso")
-        break
+        return True
+      
 def make_cappucino():
     global water
     global milk
@@ -68,7 +70,8 @@ def make_cappucino():
         Coffee -= 18
         Money += 5.40
         print ("here is ur cappuccino")
-        break
+        return True
+
 def refill():
     global water
     global milk
@@ -76,6 +79,7 @@ def refill():
     water += 300
     milk += 100
     Coffee += 100
+    print("machine refilled successfully")
     
 def report():
     print(f"water: {water}\nmilk:{milk}\ncoffee:{Coffee}\nMoney:{Money}")
@@ -91,47 +95,33 @@ while machine_running:
         refill()
     elif order == "turnoff":
         machine_running = False
-    else:
+    elif order in price_tag:
+        print(f"here is the price {price_tag[order]}")
         print("please insert coins:")
         quarter = int(input("How many quartes: "))
         dime = int(input("How many dimes: "))
         nickel = int(input("how many nickel: "))
         penny =int(input("how many pennies: "))
-    while order == "espresso":
-        if price_tag["espresso"] == process_coin(quarter,dime,nickel,penny):
-            make_espresso() 
-            break
-        elif price_tag["espresso"] < process_coin(quarter,dime,nickel,penny):
-            make_espresso()
-            change = process_coin(quarter,dime,nickel,penny)-price_tag["espresso"] 
-            print(f"and here is ur change {change}")
-            break
+
+        total_paid = process_coin(quarter,dime,nickel,penny)
+        cost = price_tag[order]
+        if total_paid < cost:
+            print("sorry that is not enough money ,here is a refund")
         else:
-            print("not enough coins")
-            break
-    while order == "latte":
-        if price_tag["latte"] == process_coin(quarter,dime,nickel,penny):
-            make_latte()
-            break
-        elif price_tag["latte"] < process_coin(quarter,dime,nickel,penny):
-            make_latte()
-            change = process_coin(quarter,dime,nickel,penny)-price_tag["latte"]
-            print(f" and here is ur change {change}")
-            break
-        else:
-            print("not enough coins")
-            break
-    while order == "cappuccino":
-        if price_tag["cappuccino"] == process_coin(quarter,dime,nickel,penny):
-            make_latte()
-            break
-        elif price_tag["cappuccino"] < process_coin(quarter,dime,nickel,penny):
-            make_latte()
-            change = process_coin(quarter,dime,nickel,penny) - price_tag["cappuccino"]
-            break
-        else:
-            print("not enough coins")
-            break
+            success = False
+            if order == "espresso":
+                success = make_espresso()
+            elif order == "latte":
+                success = make_latte()
+            elif order == "cappuccino":
+                success = make_cappucino()
+            if success:
+                change = round(total_paid - cost,2)
+                if change > 0:
+                    print(f"here is ur change ${change}")
+    else:
+        print("invalid input ,please choose espresso ,latte or cappuccino")
+    
 
         
 
