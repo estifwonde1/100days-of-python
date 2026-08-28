@@ -132,12 +132,6 @@ while machine_running:
         else:
             print("not enough coins")
             break
-    
-
-
-
-
-#am in progress am understanding the jist of it
 
         
 
