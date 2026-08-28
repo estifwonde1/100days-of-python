@@ -4,15 +4,12 @@ dP   `" dP   Yb 88__   88__   88__   88__     88b  d88   dPYb   dP   `" 88  88 8
 Yb      Yb   dP 88""   88""   88""   88""     88YbdP88  dP__Yb  Yb      888888 88 88 Y88 88""   
  YboodP  YbodP  88     88     888888 888888   88 YY 88 dP""""Yb  YboodP 88  88 88 88  Y8 888888 
 ''')
-
-
 water = 1000
 milk = 1000
 Coffee = 1000
 Money = 0
 print(f"water:{water}\nmilk:{milk}\ncoffee:{Coffee}\nMoney:{Money}")
 
- 
 currency_value = {
     "quarter" : 0.25,
     "dime" : 0.10,
