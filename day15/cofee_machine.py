@@ -80,52 +80,59 @@ def refill():
 def report():
     print(f"water: {water}\nmilk:{milk}\ncoffee:{Coffee}\nMoney:{Money}")
 
-order =input("what would you like? (espresso/latte/cappuccino)\n")
-if order == "report":
-    report()
-elif order == "refill":
-    refill()
+machine_running = True
 
-print("please insert coins:")
-quarter = int(input("How many quartes: "))
-dime = int(input("How many dimes: "))
-nickel = int(input("how many nickel: "))
-penny =int(input("how many pennies: "))
-while order == "espresso":
-    if price_tag["espresso"] == process_coin(quarter,dime,nickel,penny):
-        make_espresso() 
-        break
-    elif price_tag["espresso"] < process_coin(quarter,dime,nickel,penny):
-        make_espresso()
-        change = process_coin(quarter,dime,nickel,penny)-price_tag["espresso"] 
-        print(f"and here is ur change {change}")
-        break
+while machine_running:
+    order =input("what would you like? (espresso/latte/cappuccino)\n").lower()
+    
+    if order == "report":
+        report()
+    elif order == "refill":
+        refill()
+    elif order == "turnoff":
+        machine_running = False
     else:
-        print("not enough coins")
-        break
-while order == "latte":
-    if price_tag["latte"] == process_coin(quarter,dime,nickel,penny):
-        make_latte()
-        break
-    elif price_tag["latte"] < process_coin(quarter,dime,nickel,penny):
-        make_latte()
-        change = process_coin(quarter,dime,nickel,penny)-price_tag["latte"]
-        print(f" and here is ur change {change}")
-        break
-    else:
-        print("not enough coins")
-        break
-while order == "cappuccino":
-    if price_tag["cappuccino"] == process_coin(quarter,dime,nickel,penny):
-        make_latte()
-        break
-    elif price_tag["cappuccino"] < process_coin(quarter,dime,nickel,penny):
-        make_latte()
-        change = process_coin(quarter,dime,nickel,penny) - price_tag["cappuccino"]
-        break
-    else:
-        print("not enough coins")
-        break
+        print("please insert coins:")
+        quarter = int(input("How many quartes: "))
+        dime = int(input("How many dimes: "))
+        nickel = int(input("how many nickel: "))
+        penny =int(input("how many pennies: "))
+    while order == "espresso":
+        if price_tag["espresso"] == process_coin(quarter,dime,nickel,penny):
+            make_espresso() 
+            break
+        elif price_tag["espresso"] < process_coin(quarter,dime,nickel,penny):
+            make_espresso()
+            change = process_coin(quarter,dime,nickel,penny)-price_tag["espresso"] 
+            print(f"and here is ur change {change}")
+            break
+        else:
+            print("not enough coins")
+            break
+    while order == "latte":
+        if price_tag["latte"] == process_coin(quarter,dime,nickel,penny):
+            make_latte()
+            break
+        elif price_tag["latte"] < process_coin(quarter,dime,nickel,penny):
+            make_latte()
+            change = process_coin(quarter,dime,nickel,penny)-price_tag["latte"]
+            print(f" and here is ur change {change}")
+            break
+        else:
+            print("not enough coins")
+            break
+    while order == "cappuccino":
+        if price_tag["cappuccino"] == process_coin(quarter,dime,nickel,penny):
+            make_latte()
+            break
+        elif price_tag["cappuccino"] < process_coin(quarter,dime,nickel,penny):
+            make_latte()
+            change = process_coin(quarter,dime,nickel,penny) - price_tag["cappuccino"]
+            break
+        else:
+            print("not enough coins")
+            break
+    
 
 
 
