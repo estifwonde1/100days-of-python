@@ -1,4 +1,3 @@
-from turtle import Turtle
-
-timmy = Turtle()
+import turtle
+timmy = turtle.Turtle()
 print(timmy)
