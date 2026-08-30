@@ -1,18 +1,9 @@
+from questions import data_quiz_questions
+import random
 class User:
-    def __init__(self,user_id,username):
+    def __init__(self ,user_id ):
         self.id = user_id
-        self.username = username
-    def hello(self):
-        print(f"hello{self.username}")
-class Quiz:
-    def __init__(self,question_id):
-        self.id = question_id
-
-    def ask_question():
-        question = input("what is the capital of ethiopia").lower()
-        print()
-
-
-user = User()
-user.id = " 001"
-user.username = "estif"
+        self.score = 0
+    def ask_question(self,score):
+        needed = random.choice(data_quiz_questions["questions","answer"])
+        if ask == data
