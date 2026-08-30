@@ -8,6 +8,10 @@ class Quiz:
     def __init__(self,question_id):
         self.id = question_id
 
+    def ask_question():
+        question = input("what is the capital of ethiopia").lower()
+        print()
+
 
 user = User()
 user.id = " 001"
