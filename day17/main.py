@@ -4,6 +4,11 @@ class User:
         self.username = username
     def hello(self):
         print(f"hello{self.username}")
+class Quiz:
+    def __init__(self,question_id):
+        self.id = question_id
+
+
 user = User()
 user.id = " 001"
 user.username = "estif"
