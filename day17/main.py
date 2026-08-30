@@ -5,5 +5,12 @@ class User:
         self.id = user_id
         self.score = 0
     def ask_question(self,score):
-        needed = random.choice(data_quiz_questions["questions","answer"])
-        if ask == data
+        num = len(data_quiz_questions)
+        indie = random.randint(0,num-1)
+        que = data_quiz_questions[indie]
+        needed_data = ["question","answer"]
+        values = [que[k] for k in needed_data]
+        print(values[0])
+        ask = input("True or False\n")
+        if ask == values[1]:
+            self.score += 1
