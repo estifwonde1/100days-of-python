@@ -18,7 +18,7 @@ class User:
             answer = str(values[1])
             if ask == answer:
                 self.score += 1
-                print(self.score)
+                print(f"ur score is {self.score}")
             elif ask in ["True","False"]:
                 print(f"wrong answer, ur final score is  {self.score}")
                 play = False
