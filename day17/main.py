@@ -1,5 +1,8 @@
-from questions import data_quiz_questions
 import random
+
+from questions import data_quiz_questions
+
+
 class User:
     def __init__(self ,user_id ):
         self.id = user_id
