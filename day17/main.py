@@ -14,13 +14,13 @@ class User:
             values = [que[k] for k in needed_data]
             print(values[0])
             print(values[1])
-            ask = input("True or False\n")
-            answer = values[1]
+            ask = input("True or False\n").strip().title()
+            answer = str(values[1])
             if ask == answer:
                 self.score += 1
-                print(score)
-            elif ask != values[1]:
-                print(f"wrong answer {score}")
+                print(self.score)
+            elif ask in ["True","False"]:
+                print(f"wrong answer, ur final score is  {self.score}")
                 play = False
             else:
                 print("invalidinput")
