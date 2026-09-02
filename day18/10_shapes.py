@@ -33,6 +33,9 @@ for _ in range(9):
 for _ in range (10):
     mini.right(36)
     mini.forward(100)
+for _ in range (11):
+    mini.right(32.73)
+    mini.forward(100)
 
 
 
