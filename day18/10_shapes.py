@@ -30,6 +30,10 @@ for _ in range(8):
 for _ in range(9):
     mini.right(40)
     mini.forward(100)
+for _ in range (10):
+    mini.right(36)
+    mini.forward(100)
+
 
 
 screen = Screen()
