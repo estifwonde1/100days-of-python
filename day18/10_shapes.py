@@ -20,7 +20,9 @@ mini.forward(100)
 for _ in range(6):
     mini.right(60)
     mini.forward(100)
-mini.right(100)
+for _ in range(6):
+    mini.right(51.43)
+    mini.forward(100)
 
 
 screen = Screen()
