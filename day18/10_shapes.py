@@ -5,16 +5,21 @@ mini = Turtle()
 mini.shape()
 colors = ["crimson","darkorange","gold","forestgreen","darkcyan","deepskyblue","royalblue","hotpink","saddlebrown"]
 num = len(colors)
-
+sides = [3,4,5,6,7,8,9,10,11,12]
+n = len(sides)
 degrees = [120,90,72,60,51.43,45,40,36,32.73,30]
+m = len(degrees)
+#refactoring it and will continue tommorrow
 def randoming():
     pick = random.randint(0,num-1)
     randomize = colors[pick]
     mini.color(randomize)
-for _ in range (3):
-    mini.right(120)
-    mini.forward(100)
-randoming()
+def shapes(n,m):
+    for _ in range (n):
+        mini.right(m)
+        mini.forward(100)
+    randoming()
+shapes()
 for _ in range (4):
     mini.right(90)
     mini.forward(100)
