@@ -1,6 +1,8 @@
-from turtle import Screen, Turtle
-from shapes import randoming,colors
 import random
+from turtle import Screen, Turtle
+
+from shapes import colors
+
 mini = Turtle()
 
 walks = [0,90,180,270,360]

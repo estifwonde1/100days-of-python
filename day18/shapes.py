@@ -1,7 +1,6 @@
 import random
 from turtle import Screen, Turtle
 
-
 mini = Turtle()
 mini.shape()
 colors = ["crimson","darkorange","gold","forestgreen","darkcyan","deepskyblue","royalblue","hotpink","saddlebrown"]
