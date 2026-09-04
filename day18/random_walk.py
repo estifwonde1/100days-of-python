@@ -1,20 +1,22 @@
 import random
-from turtle import Screen, Turtle
+import turtle as t
 
-from shapes import colors
-
-mini = Turtle()
+mini = t.Turtle()
+t.colormode(255)
+def colors():
+    r = random.randint(0,255)
+    g = random.randint(0,255)
+    b = random.randint(0,255)
+    return (r,g,b)
 
 walks = [0,90,180,270]
 
-for _ in range(200):
-    pick = random.randint(0,len(colors)-1)
-    randomize = colors[pick]   
+for _ in range(200):   
     mini.pensize(7)
     mini.speed("fast")
     mini.setheading(random.choice(walks))
     mini.forward(30)
-    mini.color(randomize)
+    mini.color(colors())
     
    
     
@@ -24,5 +26,5 @@ for _ in range(200):
 
 
 
-screen = Screen()
+screen = t.Screen()
 screen.exitonclick()
