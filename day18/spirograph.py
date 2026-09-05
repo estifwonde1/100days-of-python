@@ -19,7 +19,7 @@ def circles():
         mini.circle(100)
         mini.setheading(m)
         mini.color(colors())   
-        m += 1
+        m += 5
         
 
 
