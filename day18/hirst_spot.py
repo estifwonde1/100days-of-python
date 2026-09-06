@@ -7,12 +7,11 @@ colors = [ (233, 225, 99), (208, 160, 114), (120, 172, 205), (217, 134, 174), (1
 size = len(colors)
 tub = random.choice(colors)
 mini.shape("circle")
-mini.color(tub)
 build = True
-mini.goto(0, -150)
+mini.penup()
+mini.teleport(-200, -200)
 mini.speed("fastest")
 for _ in range(10):
-
     for _ in range (20):
         tub = random.choice(colors)
         mini.color(tub)
