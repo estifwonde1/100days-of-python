@@ -9,7 +9,9 @@ tub = random.choice(colors)
 mini.shape("circle")
 mini.color(tub)
 build = True
-for _ in range(5):
+mini.goto(0, -150)
+mini.speed("fastest")
+for _ in range(10):
 
     for _ in range (20):
         tub = random.choice(colors)
@@ -20,7 +22,7 @@ for _ in range(5):
         mini.penup()
         mini.forward(20)
     mini.right(90)
-    mini.backward(20)
+    mini.backward(30)
     mini.left(90)
     for _ in range (20):
         tub = random.choice(colors)
@@ -31,7 +33,7 @@ for _ in range(5):
         mini.penup()
         mini.backward(20)
     mini.left(90)
-    mini.forward(20)
+    mini.forward(30)
     mini.right(90)
   
 
