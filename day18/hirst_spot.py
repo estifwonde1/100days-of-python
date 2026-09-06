@@ -10,32 +10,30 @@ mini.shape("circle")
 mini.color(tub)
 build = True
 for _ in range(5):
-    while build:
-        for _ in range (20):
-            tub = random.choice(colors)
-            mini.color(tub)
-            mini.pensize(10)
-            mini.shape("circle")
-            mini.pendown()
-            mini.forward(20)
-            mini.penup()
-            mini.forward(20)
-        mini.right(90)
-        mini.backward(20)
-        mini.left(90)
-        for _ in range (20):
-            tub = random.choice(colors)
-            mini.color(tub)
-            mini.pensize(10)
-            mini.shape("circle")
-            mini.pendown()
-            mini.backward(20)
-            mini.penup()
-            mini.backward(20)
-        mini.left(90)
+
+    for _ in range (20):
+        tub = random.choice(colors)
+        mini.color(tub)
+        mini.shape("circle")
+        mini.stamp()
         mini.forward(20)
-        mini.right(90)
-    build = False
+        mini.penup()
+        mini.forward(20)
+    mini.right(90)
+    mini.backward(20)
+    mini.left(90)
+    for _ in range (20):
+        tub = random.choice(colors)
+        mini.color(tub)
+        mini.shape("circle")
+        mini.stamp()
+        mini.backward(20)
+        mini.penup()
+        mini.backward(20)
+    mini.left(90)
+    mini.forward(20)
+    mini.right(90)
+  
 
 
     
