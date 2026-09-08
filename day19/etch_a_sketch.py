@@ -6,5 +6,5 @@ def move():
     mini.forward(50)
 screen = t.Screen()
 screen.listen()
-screen.onkey(key = "space" ,fun = move())
-# screen.exitonclick()
+screen.onkey(key ="space",fun=move)
+screen.exitonclick()
