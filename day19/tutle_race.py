@@ -5,7 +5,6 @@ screen = t.Screen()
 screen.setup(width=500,height=400)
 is_race_on = False
 guess = screen.textinput(title ="welcome",prompt="choose ur color")
-print(guess)
 color = ["red","yellow","green","purple","blue","orange"]
 y_postions = [-70,-40,-10,20,50,80]
 atheletes = []
@@ -28,8 +27,7 @@ while is_race_on:
             if guess == turtle.pencolor():
                 print("congrats u won")
             else:
-                print("womp womp u lost ")
-                turtle.clear()     
+                print("womp womp u lost ") 
         distance = random.randint(0,10)
         turtle.forward(distance)
 
