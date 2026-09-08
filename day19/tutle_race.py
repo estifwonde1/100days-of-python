@@ -4,6 +4,11 @@ screen = t.Screen()
 screen.setup(width=500,height=400)
 guess = screen.textinput(title ="welcome",prompt="choose ur color")
 print(guess)
+
+def race(color): 
+    distance = random.randint(0,10)
+    color.forward(distance)
+
 n = -230
 green = t.Turtle()
 green.shape("turtle")
@@ -35,6 +40,14 @@ red.shape("turtle")
 red.color("red")
 red.penup()
 red.goto(n,60)
+for _ in range (90):
+    race(green)
+    race(purple)
+    race(blue)
+    race(yellow)
+    race(orange)
+    race(red)
+
 
 
 
