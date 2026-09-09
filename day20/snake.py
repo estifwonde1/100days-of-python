@@ -3,6 +3,7 @@ import random
 
 
 screen = t.Screen()
+
 screen.setup(width=600,height=600)
 screen.bgcolor("black")
 screen.title("snakey cake")
@@ -14,8 +15,9 @@ score_board.color("white")
 score_board.penup()
 score_board.speed("fastest")
 score_board.shapesize(1,1)
-score_board.setpos(0,280)
+score_board.setpos(0,270)
 score_board.write(score,font =("ariel",20,"bold"))
+    
 
 
 segement_postions = [(0,0),(-20,0),(-40,0)]
@@ -32,40 +34,48 @@ food = t.Turtle("circle")
 food.color("green")
 food.shapesize(0.5,0.5)
 food.penup()
-x_pos = random.randint(-300,300)
-y_pos = random.randint(-300,300)
+x_pos = random.randint(-290,290)
+y_pos = random.randint(-290,290)
 food.speed("fastest")
 food.setpos(x_pos,y_pos)
 while is_gameover:   
     snakey.penup()
-    snakey.forward(10)
+    # snakey.forward(10)
     snakey.speed(1)
     for snake in fully:
         if snake.xcor() > 280 or snake.xcor() < -280 or snake.ycor() > 280 or snake.ycor() < -280:
             is_gameover = False
+            retry = screen.textinput(title ="Game Over" ,prompt="wanna play again" )
+            if retry == "yes":
+                is_gameover = True
+            else:
+                screen.exitonclick()
+#yeah am really confused on how i can move all 3 blocks getting dictated by the first 1 as head
+        snake.forward(10)
         def move_right():
-            new_heading = snakey.heading() + 90
-            snakey.setheading(new_heading)
+                new_heading = snakey.heading() + 90
+                snake.setheading(new_heading)
+                snake.forward(10)
         def move_left():
-            new_heading = snakey.heading() - 90
-            snakey.setheading(new_heading)
-        if snake.distance(food)<15:
-            x_pos = random.randint(-300,300)
-            y_pos = random.randint(-300,300)
-            food.clear()
-            food.goto(x_pos,y_pos)
-            score_board.clear()          
-            score += 1
-            score_board.write(score,font =("ariel",20,"bold"))
-            # score_board.write(score)
-            print(snake.position(),food.position())
+                new_heading = snakey.heading() - 90
+                snake.setheading(new_heading)
+                snake.forward(10)
+    if snake.distance(food)<15:
+        x_pos = random.randint(-290,290)
+        y_pos = random.randint(-290,290)
+        food.clear()
+        food.goto(x_pos,y_pos)
+        score_board.clear()          
+        score += 1
+        score_board.write(score,font =("ariel",20,"bold"))
+        print(snake.position(),food.position())
 
 
 
 
     screen.listen()
-    screen.onkey(key ="d",fun = move_right)
-    screen.onkey(key = "a",fun = move_left)
+    screen.onkey(key ="a",fun = move_right)
+    screen.onkey(key = "d",fun = move_left)
     
 
 
