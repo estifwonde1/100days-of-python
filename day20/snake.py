@@ -6,6 +6,17 @@ screen = t.Screen()
 screen.setup(width=600,height=600)
 screen.bgcolor("black")
 screen.title("snakey cake")
+score_board = t.Turtle()
+score_board.hideturtle()
+score = 0
+score_board.color("white")
+
+score_board.penup()
+score_board.speed("fastest")
+score_board.shapesize(1,1)
+score_board.setpos(0,280)
+score_board.write(score,font =("ariel",20,"bold"))
+
 
 segement_postions = [(0,0),(-20,0),(-40,0)]
 fully = []
@@ -43,7 +54,12 @@ while is_gameover:
             y_pos = random.randint(-300,300)
             food.clear()
             food.goto(x_pos,y_pos)
+            score_board.clear()          
+            score += 1
+            score_board.write(score,font =("ariel",20,"bold"))
+            # score_board.write(score)
             print(snake.position(),food.position())
+
 
 
 
