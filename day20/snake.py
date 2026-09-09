@@ -51,15 +51,16 @@ while is_gameover:
             else:
                 screen.exitonclick()
 #yeah am really confused on how i can move all 3 blocks getting dictated by the first 1 as head
+#the trick is to use the fronts postion change to be the next ones change and so on and i will try to figure that out tommorrow but for today solid work proud of myself
         snake.forward(10)
         def move_right():
                 new_heading = snakey.heading() + 90
-                snake.setheading(new_heading)
-                snake.forward(10)
+                snakey.setheading(new_heading)
+                snakey.forward(10)
         def move_left():
                 new_heading = snakey.heading() - 90
-                snake.setheading(new_heading)
-                snake.forward(10)
+                snakey.setheading(new_heading)
+                snakey.forward(10)
     if snake.distance(food)<15:
         x_pos = random.randint(-290,290)
         y_pos = random.randint(-290,290)
