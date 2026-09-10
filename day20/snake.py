@@ -27,6 +27,7 @@ food.setpos(x_pos,y_pos)
 head = t.Turtle(shape="square")
 head.penup()
 head.color("white")
+
 segement_postions = [(-20,0),(-40,0)]
 fully = []
 for _ in segement_postions:
@@ -46,11 +47,12 @@ def move():
         history = (index + 1) *3
         if len(pos_history) > history:
             snakey.goto(pos_history[history])
-    if len(pos_history) > 10:
-        pos_history.pop()
+    # if len(pos_history) > 10:
+    #     pos_history.pop()
     if head.xcor() > 280 or head.xcor() < -280 or head.ycor() > 280 or head.ycor() < -280:
         screen.exitonclick()
     if head.distance(food) < 15:
+        n = -60
         global score
         x_pos = random.randint(-290,290)
         y_pos = random.randint(-290,290)
@@ -59,6 +61,14 @@ def move():
         score_board.clear()          
         score += 1
         score_board.write(score,font =("ariel",20,"bold"))
+        snakey = t.Turtle(shape = "square")
+        snakey.color("white")
+        snakey.penup()
+        snakey.goto(head.xcor(),head.ycor())
+        fully.append(snakey)
+        n += -20
+        print (n,head.ycor())
+
         print(head.position(),food.position())
     screen.update()
     screen.ontimer(move,20)
