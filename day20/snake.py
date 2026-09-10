@@ -47,9 +47,9 @@ def move():
         history = (index + 1) *3
         if len(pos_history) > history:
             snakey.goto(pos_history[history])
-    # if len(pos_history) > 10:
+    # if len(pos_history) > 20:
     #     pos_history.pop()
-    if head.xcor() > 280 or head.xcor() < -280 or head.ycor() > 280 or head.ycor() < -280:
+    if head.xcor() > 290 or head.xcor() < -290 or head.ycor() > 290 or head.ycor() < -290:
         screen.exitonclick()
     if head.distance(food) < 15:
         n = -60
