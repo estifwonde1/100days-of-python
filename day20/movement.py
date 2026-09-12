@@ -20,7 +20,8 @@ while is_game_on:
         new_x = segments(seg_num-1).xcor()
         new_y = segments(seg_num-1).ycor()
         seg_num.goto(new_x,new_y)
-        
+
+    snakey.forward(10)
     
 
 
