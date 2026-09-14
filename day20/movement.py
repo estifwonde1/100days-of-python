@@ -6,6 +6,7 @@ UP= 90
 DOWN = 270
 RIGHT = 0
 LEFT =180
+
 class Snake:
     def __init__(self):
         self.segments =[]
@@ -42,6 +43,9 @@ class Snake:
         snakey.penup()
         snakey.speed("fastest")
         self.segments.append(snakey)
+    def game_over(self):
+        if self.head.xcor() > 290 or self.head.xcor() < -290 or self.head.ycor() > 290 or self.head.ycor() < -290:
+            exit()
 
             
 

@@ -18,5 +18,5 @@ class Score(t.Turtle):
 
         score += 1
         self.clear()
-        self.write(f"Score :{score}",font=("ariel",20,"bold"))
+        self.write(f"Score: {score}",font=("ariel",20,"bold"))
 

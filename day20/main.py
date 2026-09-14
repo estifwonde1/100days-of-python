@@ -34,6 +34,7 @@ while game_is_on:
         food.refresh()
         snake.add_block()
         score.add_score()
+    snake.game_over()
 
     
 
