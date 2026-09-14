@@ -1,9 +1,23 @@
 import turtle as t
+import random
 import time
 
-class Snake(self):
-    def __init__(self):
+class Snake():
+    def __init__(self ,snake,):
         self.snake = t.Turtle("square")
+    
+
+class food():
+    def __init__(self):
+        self.food=t.turtle("circle")
+        food.color("green")
+        food.shapesize(0.5,0.5)
+        food.penup()
+    def appear():
+        x_pos = random.randint(-290,290)
+        y_pos = random.randint(-290,290)
+        food.speed("fastest")
+        food.setpos(x_pos,y_pos)
 screen = t.Screen()
 screen.setup(width = 600,height = 600)
 screen.title("test subject")
