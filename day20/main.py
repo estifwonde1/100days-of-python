@@ -1,6 +1,8 @@
 import turtle as t
 from movement import Snake
+from food import Food
 import time
+import random
 
 
 
@@ -17,12 +19,20 @@ screen.onkey(key = "Down",fun= snake.move_down)
 screen.onkey(key= "Left",fun = snake.move_left)
 screen.onkey(key="Right",fun=snake.move_right)
 
+
+x_pos = random.randint(-290,290)
+y_pos = random.randint(-290,290)
+food = Food()
+food.appear(x_pos,y_pos)
+
 game_is_on = True
 
 while game_is_on:
+  
     screen.update()
     time.sleep(0.1)
     snake.move()
+    
 
 
 

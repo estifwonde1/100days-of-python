@@ -1,6 +1,4 @@
 import turtle as t
-import random
-import time
 
 SEGMENT_POSITIONS =[(0,0),(-20,0),(-40,0)]
 MOVE_DISTANCE = 20
@@ -28,7 +26,6 @@ class Snake:
         self.head.forward(MOVE_DISTANCE)
     def move_up(self):
         if self.head.heading() != DOWN:
-     
            self.head.setheading(UP)
     def move_down(self):
         if self.head.heading() != UP:
@@ -39,6 +36,11 @@ class Snake:
     def move_left(self):
         if self.head.heading() != RIGHT:
             self.head.setheading(180)
+    def add_block(self):
+        snakey = t.Turtle(shape="square")
+        snakey.color("white")
+        snakey.penup()
+        self.segments.append(snakey)
 
 
 
