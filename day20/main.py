@@ -1,6 +1,7 @@
 import turtle as t
 from movement import Snake
 from food import Food
+from score_board import Score
 import time
 
 
@@ -21,13 +22,12 @@ screen.onkey(key="Right",fun=snake.move_right)
 
 
 food = Food ()
-
+score = Score()
 
 
 game_is_on = True
 
-while game_is_on:
-  
+while game_is_on: 
     screen.update()
     time.sleep(0.1)
     snake.move()
@@ -35,6 +35,8 @@ while game_is_on:
         food.clear()
         food.refresh()
         snake.add_block()
+        score.add_score()
+
     
 
 
