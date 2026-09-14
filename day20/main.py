@@ -1,11 +1,9 @@
-import turtle as t
-from movement import Snake
-from food import Food
-from score_board import Score
 import time
+import turtle as t
 
-
-
+from food import Food
+from movement import Snake
+from score_board import Score
 
 screen=t.Screen()
 screen.setup(width=600,height=600)
@@ -32,7 +30,7 @@ while game_is_on:
     time.sleep(0.1)
     snake.move()
     if snake.head.distance(food) < 15:
-        food.clear()
+       
         food.refresh()
         snake.add_block()
         score.add_score()

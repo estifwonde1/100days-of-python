@@ -1,5 +1,4 @@
 import turtle as t
-from food import Food
 
 SEGMENT_POSITIONS =[(0,0),(-20,0),(-40,0)]
 MOVE_DISTANCE = 20
