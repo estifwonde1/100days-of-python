@@ -1,4 +1,5 @@
 import turtle as t
+from food import Food
 
 SEGMENT_POSITIONS =[(0,0),(-20,0),(-40,0)]
 MOVE_DISTANCE = 20
@@ -40,7 +41,10 @@ class Snake:
         snakey = t.Turtle(shape="square")
         snakey.color("white")
         snakey.penup()
+        snakey.speed("fastest")
         self.segments.append(snakey)
+
+            
 
 
 
