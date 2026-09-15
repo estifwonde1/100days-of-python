@@ -43,16 +43,7 @@ class Snake:
         self.segments.append(snakey)
     def extend(self,):
         self.add_block(self.segments[-1].position())
-    def game_over(self):
-        if self.head.xcor() > 290 or self.head.xcor() < -290 or self.head.ycor() > 290 or self.head.ycor() < -290:
-            self.pop.hideturtle()
-            self.pop.color("white")
-            # self.pop.penup()
-            self.pop.setpos(0,0)
-            self.pop.shapesize(1,1)
-            self.pop.write("Game Over." ,font=("ariel",20,"bold"))
-            exit()
-
+    
             
 
 
