@@ -11,14 +11,12 @@ class Snake:
     def __init__(self):
         self.segments =[]
         self.create_snake()
+        self.pop =t.Turtle()
         self.head = self.segments[0]
     def create_snake(self):
-        for postions in SEGMENT_POSITIONS:
-            snakey = t.Turtle(shape="square")
-            snakey.color("white")
-            snakey.penup()
-            snakey.goto(postions)
-            self.segments.append(snakey)
+        for postion in SEGMENT_POSITIONS:
+            self.add_block(postion)
+                  
     def move(self):
         for seg_num in range(len(self.segments)-1,0,-1):
             new_x = (self.segments[seg_num-1].xcor())
@@ -37,14 +35,22 @@ class Snake:
     def move_left(self):
         if self.head.heading() != RIGHT:
             self.head.setheading(180)
-    def add_block(self):
+    def add_block(self,postion):
         snakey = t.Turtle(shape="square")
         snakey.color("white")
         snakey.penup()
-        snakey.speed("fastest")
+        snakey.goto(postion)
         self.segments.append(snakey)
+    def extend(self,):
+        self.add_block(self.segments[-1].position())
     def game_over(self):
         if self.head.xcor() > 290 or self.head.xcor() < -290 or self.head.ycor() > 290 or self.head.ycor() < -290:
+            self.pop.hideturtle()
+            self.pop.color("white")
+            # self.pop.penup()
+            self.pop.setpos(0,0)
+            self.pop.shapesize(1,1)
+            self.pop.write("Game Over." ,font=("ariel",20,"bold"))
             exit()
 
             
