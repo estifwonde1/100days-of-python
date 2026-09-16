@@ -31,8 +31,14 @@ while game_on:
     screen.update()  
     ball.move()
 
-    if ball.ycor() > 300  or ball.ycor() < -300 :
+    if ball.ycor() > 290  or ball.ycor() < -290 :
         ball.bounce()
+    if block2.distance(ball) < 15:
+        print("thck")
+        ball.bounce_back()
+    if block1.distance(ball) < 15:
+        print("thck")
+        ball.bounce_back()
    
       
 
