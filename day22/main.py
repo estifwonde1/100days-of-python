@@ -1,0 +1,27 @@
+from turtle import Screen
+from block import Block
+from score_board import Score , Boundry
+
+screen = Screen()
+screen.setup(width=800, height=600)
+screen.bgcolor("black")
+screen.title("PONG")
+
+block1 = Block()
+block1.goto(-390,0)
+block2= Block()
+block2.goto(390,0)
+segment = Boundry()
+score1 = Score((-100,270))
+score2 = Score((100,270))
+
+
+
+
+
+
+
+
+
+
+screen.exitonclick()
