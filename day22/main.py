@@ -15,7 +15,11 @@ segment = Boundry()
 score1 = Score((-100,270))
 score2 = Score((100,270))
 
-
+screen.listen()
+screen.onkey(key ="Up",fun=block2.move_up)
+screen.onkey(key ="Down",fun=block2.move_down)
+screen.onkey(key= "w",fun=block1.move_up)
+screen.onkey(key="s",fun=block1.move_down)
 
 
 

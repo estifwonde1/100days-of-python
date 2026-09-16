@@ -8,3 +8,12 @@ class Block(Turtle):
         self.shapesize(3,1)
         self.color("white")
         self.speed("fastest")
+    def move_up(self):
+        self.goto(self.xcor(),self.ycor()+20)
+        
+
+    def move_down(self):
+        self.goto(self.xcor(),self.ycor()-20)
+        
+
+
