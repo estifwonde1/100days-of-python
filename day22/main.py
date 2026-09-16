@@ -39,6 +39,13 @@ while game_on:
     if block1.distance(ball) < 15:
         print("thck")
         ball.bounce_back()
+    if ball.xcor() > 395:
+        score1.add_score()
+        break
+    if ball.xcor() < -395:
+        score2.add_score()
+        break
+
    
       
 

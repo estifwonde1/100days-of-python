@@ -13,15 +13,11 @@ class Score(t.Turtle):
         self.goto(position)
         self.write(score,font=("ariel",20,"bold"))
         
-       
-        
-    
-    
+          
     def add_score(self):
-      
-
-        
-        # self.clear()
+        global score
+        self.clear()
+        score +=1        
         self.write(score,font=("ariel",20,"bold"))
     # def game_over(self):
     #   self.goto(0,0)  
