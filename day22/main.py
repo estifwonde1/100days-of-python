@@ -1,8 +1,9 @@
-from turtle import Screen
-from block import Block
-from score_board import Score , Boundry
-from ball import Ball
 import time
+from turtle import Screen
+
+from ball import Ball
+from block import Block
+from score_board import Boundry, Score
 
 screen = Screen()
 screen.setup(width=800, height=600)
