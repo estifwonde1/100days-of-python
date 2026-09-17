@@ -10,10 +10,8 @@ screen.bgcolor("black")
 screen.title("PONG")
 screen.tracer(0)
 ball = Ball()
-block1 = Block()
-block1.goto(-390,0)
-block2= Block()
-block2.goto(390,0)
+block1 = Block((-390,0))
+block2= Block((390,0))
 segment = Boundry()
 score1 = Score((-100,270))
 score2 = Score((100,270))
@@ -41,10 +39,13 @@ while game_on:
         ball.bounce_back()
     if ball.xcor() > 395:
         score1.add_score()
-        break
+        ball.refresh()
+        ball.move()
+        
     if ball.xcor() < -395:
+        ball.refresh()
         score2.add_score()
-        break
+       
 
    
       

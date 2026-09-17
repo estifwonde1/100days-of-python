@@ -19,6 +19,10 @@ class Ball(Turtle):
        self.y_move *= -1
     def bounce_back(self):
         self.x_move *= -1
+    def refresh(self):
+        self.goto(0,0)
+        self.bounce_back()
+        
     
 
   

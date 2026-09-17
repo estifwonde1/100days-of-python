@@ -1,6 +1,6 @@
 import turtle as t
 
-score = 0
+
 class Score(t.Turtle):
     
     def __init__(self,position):
@@ -11,14 +11,16 @@ class Score(t.Turtle):
         self.speed("fastest")
         self.shapesize(1,1)
         self.goto(position)
-        self.write(score,font=("ariel",20,"bold"))
+        self.score = 0
+        self.write(self.score,font=("ariel",20,"bold"))
+
         
           
     def add_score(self):
-        global score
+      
         self.clear()
-        score +=1        
-        self.write(score,font=("ariel",20,"bold"))
+        self.score +=1        
+        self.write(self.score,font=("ariel",20,"bold"))
     # def game_over(self):
     #   self.goto(0,0)  
 class Boundry(t.Turtle):
