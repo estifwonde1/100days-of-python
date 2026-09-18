@@ -24,18 +24,36 @@ score = Score((-150,270))
 
 
 game_is_on = True
+def contn():
+    cont = screen.textinput(title = "Game over",prompt= "wanna play again?")
+    if cont == "yes":
+        score.reset()
+        snake.reset()
+        game_is_on = True
+    else:
+        game_is_on = False
+        
 
 while game_is_on: 
+    sc = 0
     screen.update()
     time.sleep(0.1)
     snake.move()
+   
     if snake.head.distance(food) < 15:
         food.refresh()
         snake.extend()
         score.add_score()
+ 
+      
+
     if snake.head.xcor() > 290 or snake.head.xcor() < -290 or snake.head.ycor() > 290 or snake.head.ycor() < -290:
-        score.reset()
-        snake.reset()
+            score.reset()
+            snake.reset()
+            score.save()
+         
+        
+      
     for segment in snake.segments[1:]:
         if snake.head.distance(segment) < 10:
             score.reset()
