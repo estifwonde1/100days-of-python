@@ -22,21 +22,23 @@ game_is_on = True
 inc = 0.3
 while game_is_on:
     screen.update()
-    time.sleep(inc) 
-    print(inc)   
+    time.sleep(inc)    
     rand_num = random.randrange(-300,301,20)
     color = random.choice(colors)
     obstacle = Obstacle((300,rand_num),color)
     hold.append(obstacle)
     for obstacle in hold:
-        obstacle.move()
-        
+        obstacle.move() 
+        if obstacle.distance(chick) < 30:
+            game_is_on = False
+            level.game_over()
+            break     
     if chick.ycor() > 300:
         chick.goto(0,-280)
         inc += 0.1
-        # time.sleep(inc)
         level.add_score()
         print(inc)
+    
 
 
 

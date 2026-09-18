@@ -10,5 +10,5 @@ class Chicken(Turtle):
         self.goto(position)
         
     def move_up(self):
-        self.goto(self.xcor(),self.ycor()+10)
+        self.goto(self.xcor(),self.ycor()+20)
 

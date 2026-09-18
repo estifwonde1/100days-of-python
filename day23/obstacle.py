@@ -10,4 +10,5 @@ class Obstacle(Turtle):
         self.color(color)
         
     def move(self):
-        self.backward(20)
+        self.backward(10)
+    
