@@ -12,17 +12,22 @@ screen.title("Turtle Race")
 screen.tracer(0)
 
 chick = Chicken((0,-280))
-rand_num = random.randrange(-300,301,20)
-color = random.choice(colors)
-obstacle = Obstacle((300,rand_num),color)
 
+    
+hold = []
 screen.listen()
 screen.onkey(key = "Up", fun = chick.move_up)
 game_is_on = True
 while game_is_on:
     screen.update()
-    time.sleep(0.1)
-    obstacle.move()
+    time.sleep(0.1) 
+    
+    rand_num = random.randrange(-300,301,20)
+    color = random.choice(colors)
+    obstacle = Obstacle((300,rand_num),color)
+    hold.append(obstacle)
+    for obstacle in hold:
+        obstacle.move()
 
 
 
