@@ -1,5 +1,6 @@
 from turtle import Turtle
 
+
 class Obstacle(Turtle):
     def __init__(self,positions,color):
         super().__init__()

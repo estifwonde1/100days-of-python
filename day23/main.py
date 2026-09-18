@@ -1,9 +1,10 @@
+import random
+import time
 from turtle import Screen
+
 from chicken import Chicken
 from obstacle import Obstacle
 from score_board import Score
-import random
-import time
 
 colors = ["hotpink", "darkorange", "gold", "forestgreen", "skyblue", 
           "turquoise", "royalblue", "purple", "crimson", "darkorchid"]

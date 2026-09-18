@@ -1,5 +1,6 @@
 from turtle import Turtle
 
+
 class Score(Turtle):
     def __init__(self,position):
         super().__init__()
