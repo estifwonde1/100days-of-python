@@ -20,7 +20,7 @@ screen.onkey(key="Right",fun=snake.move_right)
 
 
 food = Food ()
-score = Score()
+score = Score((-150,270))
 
 
 game_is_on = True
@@ -34,12 +34,12 @@ while game_is_on:
         snake.extend()
         score.add_score()
     if snake.head.xcor() > 290 or snake.head.xcor() < -290 or snake.head.ycor() > 290 or snake.head.ycor() < -290:
-        game_is_on = False
-        score.game_over()
+        score.reset()
+        snake.reset()
     for segment in snake.segments[1:]:
         if snake.head.distance(segment) < 10:
-            game_is_on = False
-            score.game_over()
+            score.reset()
+            snake.reset()
        
         
 
