@@ -24,15 +24,6 @@ score = Score((-150,270))
 
 
 game_is_on = True
-def contn():
-    cont = screen.textinput(title = "Game over",prompt= "wanna play again?")
-    if cont == "yes":
-        score.reset()
-        snake.reset()
-        game_is_on = True
-    else:
-        game_is_on = False
-        
 
 while game_is_on: 
     sc = 0

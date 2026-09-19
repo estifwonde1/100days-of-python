@@ -1,5 +1,6 @@
 import turtle as t
 
+
 class Score(t.Turtle):
     
     def __init__(self,position):
@@ -27,8 +28,7 @@ class Score(t.Turtle):
         self.clear()
         self.write(f"Score: {self.score} High Score {self.high_score}",font=("ariel",20,"bold"))
     def reset(self):
-        if self.score > self.high_score:
-            self.high_score = self.score
+        self.high_score = max(self.high_score, self.score)
         self.score = 0
         self.update_score()
     def save(self):

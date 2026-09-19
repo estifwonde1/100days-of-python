@@ -1,4 +1,5 @@
 import os
+
 target_dir = "output/ready_to_send"
 with open("input/letters/starting_letters.txt") as file:
     content = file.read()
