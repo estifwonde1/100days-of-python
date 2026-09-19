@@ -1,2 +1,9 @@
 **/__pycache__/
 .venv
+**/highscore.txt
+**/my_file.txt
+**input
+**color_count.csv
+**squirrel_data.csv
+**weather_data.csv
+**states.csv
