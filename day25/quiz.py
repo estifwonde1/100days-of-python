@@ -8,6 +8,8 @@ data_fur = data["Highlight Fur Color"].to_list()
 # print(Gray_squirrel)
 # print(Cinnamon_squirrel)
 Colors = ["Gray","Cinnamon","Black","White","Red"]
+get = data[data["Primary Fur Color"] == "Gray"]
+print(get.X.to_list())
 def Color_Count(color):
     colors= len(data[data["Primary Fur Color"] == color])
     print(colors)
