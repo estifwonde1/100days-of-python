@@ -14,20 +14,26 @@ state_xcor =data["x"].to_list()
 state_ycor = data["y"].to_list()
 state_name = data["state"].to_list()
 game_is_on = True
-
+n = 0
 while game_is_on:
-    answer_state = screen.textinput(title="Guess the state",prompt="what is another state")
-    answer = data[data.state == answer_state]
-    x_cor=answer.x.to_list()
-    y_cor=answer.y.to_list()
   
+    answer_state = screen.textinput(title=f"{n}/50 Correct",prompt="what is another state")
+    print(n)
 
-    put = t.Turtle()
-    put.hideturtle()
-    put.color("black")
-    put.penup()
-    put.goto(x_cor[0],y_cor[0])
-    put.write(answer_state)
+    if answer_state in state_name:
+        answer = data[data.state == answer_state] 
+        x_cor=answer.x.to_list()
+        y_cor=answer.y.to_list()  
+        n += 1
+        put = t.Turtle()
+        put.hideturtle()
+        put.color("black")
+        put.penup()
+        put.goto(x_cor[0],y_cor[0])
+        put.write(answer_state)
+    else:
+        answer_state = screen.textinput(title=f"{n}/50 Correct",prompt="what is another state")
+    
 
 
 
