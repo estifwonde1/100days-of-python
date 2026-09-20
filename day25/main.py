@@ -1,4 +1,7 @@
 import turtle as t
+import pandas as pd
+
+data=pd.read_csv("50_states.csv")
 
 screen= t.Screen()
 screen.setup(750,500)
