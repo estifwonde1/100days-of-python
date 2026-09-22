@@ -21,7 +21,16 @@
 
 # result = { letter : len(letter) for letter in list(sentence) }
 # print(result)
-weather = eval(input())
+# weather = eval(input())
 
-conver={}
-print(weather)
+# conver={value:conv*9/5 + 32 for value,conv in weather.items()}
+# print(conver)
+student_dict ={
+    "student":["angela","james","lilly"],
+    "grades":[56,76,98]
+}
+import pandas as pd
+
+new_data=pd.DataFrame(student_dict)
+new_data.to_csv("student_grades.csv")
+loop ={key : value for (key,value) in new_data.iterrows()}
