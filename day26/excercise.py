@@ -19,12 +19,12 @@
 # sentence = input().split(" ")
 # print(list(sentence))
 
-# result = { letter : len(letter) for letter in list(sentence) }
-# print(result)
-# weather = eval(input())
+result = { letter : len(letter) for letter in list(sentence) }
+print(result)
+weather = eval(input())
 
-# conver={value:conv*9/5 + 32 for value,conv in weather.items()}
-# print(conver)
+conver={value:conv*9/5 + 32 for value,conv in weather.items()}
+print(conver)
 student_dict ={
     "student":["angela","james","lilly"],
     "grades":[56,76,98]
