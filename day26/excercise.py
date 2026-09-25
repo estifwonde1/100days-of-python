@@ -25,10 +25,10 @@
 
 # conver={value:conv*9/5 + 32 for value,conv in weather.items()}
 # print(conver)
-# student_dict ={
-#     "student":["angela","james","lilly"],
-#     "grades":[56,76,98]
-# }
+student_dict ={
+    "student":["angela","james","lilly"],
+    "grades":[56,76,98]
+}
 import pandas as pd
 
 new_data=pd.DataFrame(student_dict)
