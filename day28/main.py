@@ -1,5 +1,5 @@
 from tkinter import *
-import time
+import math
 
 PINK = "#FFC0CB"
 RED = "#FF0000"
@@ -27,24 +27,27 @@ canvas.pack()
 #     print(b)
 #     print(c)
 def counter(count):
+    count_min = math.floor(count/60)
+    count_sec =count%60
+    if count_sec == 0:
+        count_sec = "00"
     print(count)
-    canvas.itemconfig(timer_change, text = count)
-    window.after(1000,counter,count - 1)
+    if count > -1:
+        canvas.itemconfig(timer_change, text = f"{count_min}:{count_sec}")
+        window.after(1000,counter,count - 1)
 
     
 
 
 
-
-
-        
-counter(5)
+def accept():        
+    counter(5 * 60)
 
 
 
 
 reset = Button(text= "Reset" )
-start=Button(text="start")
+start=Button(text="start",command=accept)
 canvas.create_window(200,500,window=start)
 canvas.create_window(350,500,window=reset)
 
