@@ -20,34 +20,42 @@ canvas.create_image(260,270,image=tomato)
 timer_change=canvas.create_text(260,290,text= 0 ,fill="white" ,font=(FONT_NAME,35,"bold"))
 canvas.pack()
 
-# def say_something(a,b,c,):
-    
 
-#     print(a)
-#     print(b)
-#     print(c)
-def counter(count):
+def count_down(count):
     count_min = math.floor(count/60)
     count_sec =count%60
+    counter = 0
     if count_sec == 0:
         count_sec = "00"
-    print(count)
+    
     if count > -1:
         canvas.itemconfig(timer_change, text = f"{count_min}:{count_sec}")
-        window.after(1000,counter,count - 1)
+        window.after(1000,count_down,count - 1)
+    if count == -1:
+        counter += 1
+        print("runned")
+        Break_time()
+        Focus_time()
+        if counter == 4:
+            Long_break()
 
     
 
 
 
-def accept():        
-    counter(5 * 60)
+def Focus_time():        
+    count_down(0.1 * 60)
+def Break_time():
+    count_down(0.2 * 60)
+def Long_break():
+    count_down(0.3 * 60)
+
 
 
 
 
 reset = Button(text= "Reset" )
-start=Button(text="start",command=accept)
+start=Button(text="start",command=Focus_time)
 canvas.create_window(200,500,window=start)
 canvas.create_window(350,500,window=reset)
 
