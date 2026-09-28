@@ -37,7 +37,7 @@ def count_down(count):
         print("runned")
         Break_time()
         Focus_time()
-        if rep == 4:
+        if rep == 4: #this is for the pomodro loop so that 4 focus session followed by 1 long break
             Long_break()
 
     
