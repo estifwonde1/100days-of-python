@@ -9,6 +9,7 @@ FONT_NAME = "Courier"
 WORK_MIN = 25
 SHORT_BREAK_MIN = 5
 LONG_BREAK = 20
+rep = 0
 testers=["00:00","00:01","00:02","00:03","00:04","00:05","00:06"]
 
 
@@ -22,9 +23,9 @@ canvas.pack()
 
 
 def count_down(count):
+    global rep 
     count_min = math.floor(count/60)
     count_sec =count%60
-    counter = 0
     if count_sec == 0:
         count_sec = "00"
     
@@ -32,14 +33,15 @@ def count_down(count):
         canvas.itemconfig(timer_change, text = f"{count_min}:{count_sec}")
         window.after(1000,count_down,count - 1)
     if count == -1:
-        counter += 1
+        rep += 1
         print("runned")
         Break_time()
         Focus_time()
-        if counter == 4:
+        if rep == 4:
             Long_break()
 
     
+
 
 
 
