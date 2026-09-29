@@ -18,46 +18,41 @@ window.title("Pomodro techinique")
 tomato = PhotoImage(file ="tomato.png")
 canvas = Canvas(width=525,height=550 )
 canvas.create_image(260,270,image=tomato)
-timer_change=canvas.create_text(260,290,text= 0 ,fill="white" ,font=(FONT_NAME,35,"bold"))
+timer_change=canvas.create_text(260,290,text= "00:00" ,fill="white" ,font=(FONT_NAME,35,"bold"))
 canvas.pack()
 
 
-def count_down(count):
-    global rep 
+def count_down(count): 
     count_min = math.floor(count/60)
     count_sec =count%60
-    if count_sec == 0:
-        count_sec = "00"
+    if count_sec < 10:
+        count_sec = f"0{count_sec}"
     
     if count > -1:
         canvas.itemconfig(timer_change, text = f"{count_min}:{count_sec}")
         window.after(1000,count_down,count - 1)
-    if count == -1:
-        rep += 1
-        print("runned")
-        Break_time()
-        Focus_time()
-        if rep == 4: #this is for the pomodro loop so that 4 focus session followed by 1 long break
-            Long_break()
+    else:
+        start_timer()
+  
 
-    
+def start_timer():
+    global rep 
+    rep +=1
 
+    work_min = WORK_MIN * 60
+    short_break = SHORT_BREAK_MIN * 60
+    long_break = LONG_BREAK * 60
+    if rep % 8 == 0:
+        count_down(long_break)
 
-
-
-def Focus_time():        
-    count_down(0.1 * 60)
-def Break_time():
-    count_down(0.2 * 60)
-def Long_break():
-    count_down(0.3 * 60)
-
-
-
-
+    elif rep % 2 ==0:
+        count_down(short_break)
+    else:
+        count_down(work_min)
+ 
 
 reset = Button(text= "Reset" )
-start=Button(text="start",command=Focus_time)
+start=Button(text="start",command=start_timer)
 canvas.create_window(200,500,window=start)
 canvas.create_window(350,500,window=reset)
 
