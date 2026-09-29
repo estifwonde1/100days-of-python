@@ -10,7 +10,7 @@ WORK_MIN = 25
 SHORT_BREAK_MIN = 5
 LONG_BREAK = 20
 rep = 0
-testers=["00:00","00:01","00:02","00:03","00:04","00:05","00:06"]
+
 
 
 window = Tk()
