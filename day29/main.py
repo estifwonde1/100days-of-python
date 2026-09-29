@@ -1,5 +1,13 @@
 from tkinter import *
 import random 
+import string
+import os
+
+rand_num = random.randint(1,100)
+letters = list(string.ascii_letters)
+numbers = list(string.digits)
+special_char = list(string.punctuation)
+password= []
 
 window = Tk()
 window.title("password generator")
@@ -10,19 +18,40 @@ canvas.grid(row= 0,column = 0 ,columnspan= 2,pady = 20)
 website_label = Label(text = "Webiste:")
 website_label.grid(row = 1,column = 0 ,padx=10,pady=10)
 website_entry = Entry(width=30)
+website_entry.focus()
 website_entry.grid(row = 1,column= 1,padx=10,pady=10)
 email_label = Label(text = "Email/Username :")
 email_label.grid(row=2,column =0,padx=10,pady=10)
 email_entry=Entry(width = 30)
+email_entry.insert(0,"estifwonde211@gmail.com")
 email_entry.grid(row=2,column=1,padx=10,pady=10)
 password_label = Label(text = "Password :")
 password_label.grid(row = 3,column = 0,padx=(5,5),pady=10)
 password_entry = Entry(width =15)
 password_entry.grid(row=3,column=1,padx=(5,2),pady=10)
-generate_btn = Button(text = "Generate")
-generate_btn.grid(row=3,column=2,padx=(1,10),pady=10)
-add_btn = Button(text = "add",width=30)
+def generator():
+    for _ in range ( 9):
+        password.append(random.choice(letters))
+        password.append(random.choice(numbers))
+        password.append(random.choice(special_char))
+    random.shuffle(password)
+    final_password = "".join(password)
+    password_entry.insert(0,final_password)
+def add():
+    data =pd.read_csv("passwords.txt",sep="|")
+    website = website_entry.get()
+    user_name = email_entry.get()
+    password = password_entry.get()
+    collect = [[website,"|",user_name,"|",password]]
+    new_save = pd.DataFrame( collect )
+    data =pd.concat([data,new_save],ignore_index =False)   
+    new_save.to_csv("passwords.txt",index=False)
+
+generate_btn = Button(text = "Generate",command = generator)
+generate_btn.grid(row=3,column=2,columnspan=2,padx=(1,10),pady=10)
+add_btn = Button(text = "add",width=30,command=add)
 add_btn.grid(row=4,column=1)
+
 
 
 
