@@ -1,7 +1,6 @@
-from tkinter import *
-import random 
+import random
 import string
-
+from tkinter import *
 
 rand_num = random.randint(1,100)
 letters = list(string.ascii_letters)
