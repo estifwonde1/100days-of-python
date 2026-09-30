@@ -1,13 +1,14 @@
 from tkinter import *
 import random 
 import string
-import os
+
 
 rand_num = random.randint(1,100)
 letters = list(string.ascii_letters)
 numbers = list(string.digits)
 special_char = list(string.punctuation)
 password= []
+
 
 window = Tk()
 window.title("password generator")
@@ -37,15 +38,13 @@ def generator():
     random.shuffle(password)
     final_password = "".join(password)
     password_entry.insert(0,final_password)
-def add():
-    data =pd.read_csv("passwords.txt",sep="|")
+def add(): 
     website = website_entry.get()
     user_name = email_entry.get()
     password = password_entry.get()
-    collect = [[website,"|",user_name,"|",password]]
-    new_save = pd.DataFrame( collect )
-    data =pd.concat([data,new_save],ignore_index =False)   
-    new_save.to_csv("passwords.txt",index=False)
+    with open("password.txt","a") as file:
+        file.write(f"\n{website}|{user_name}|{password}")
+
 
 generate_btn = Button(text = "Generate",command = generator)
 generate_btn.grid(row=3,column=2,columnspan=2,padx=(1,10),pady=10)
