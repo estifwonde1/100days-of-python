@@ -37,15 +37,18 @@ def generator():
     final_password = "".join(password)
     password_entry.insert(0,final_password)
 def add(): 
-    answer = messagebox.askyesno("Comfirmation","Are u sure u want to save the password")
-    if answer:
-        website = website_entry.get()
-        user_name = email_entry.get()
-        password = password_entry.get()
-        with open("password.txt","a") as file:
-            file.write(f"\n{website}|{user_name}|{password}")
+    website = website_entry.get()
+    user_name = email_entry.get()
+    password = password_entry.get()
+    if len(website) < 1 or len(password) < 1 :
+        messagebox.showerror("invalid inputs","inputs can't be empty")
     else:
-        return 
+        answer = messagebox.askyesno("Comfirmation",f"Are u sure u want to save the password : {password} for this website: {website}")
+        if answer:  
+            with open("password.txt","a") as file:
+                file.write(f"\n{website}|{user_name}|{password}")
+        else:
+            return 
 generate_btn = Button(text = "Generate",command = generator)
 generate_btn.grid(row=3,column=2,columnspan=2,padx=(1,10),pady=10)
 add_btn = Button(text = "add",width=30,command=add)
