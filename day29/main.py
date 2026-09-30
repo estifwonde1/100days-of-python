@@ -2,6 +2,7 @@ import random
 import string
 from tkinter import *
 from tkinter import messagebox
+import pyperclip
 
 rand_num = random.randint(1,100)
 letters = list(string.ascii_letters)
@@ -47,6 +48,7 @@ def add():
         if answer:  
             with open("password.txt","a") as file:
                 file.write(f"\n{website}|{user_name}|{password}")
+            pyperclip.copy(password)
         else:
             return 
 generate_btn = Button(text = "Generate",command = generator)
