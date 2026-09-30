@@ -1,14 +1,13 @@
 import random
 import string
 from tkinter import *
+from tkinter import messagebox
 
 rand_num = random.randint(1,100)
 letters = list(string.ascii_letters)
 numbers = list(string.digits)
 special_char = list(string.punctuation)
 password= []
-
-
 window = Tk()
 window.title("password generator")
 lock = PhotoImage(file = "locks-removebg-preview.png")
@@ -38,13 +37,15 @@ def generator():
     final_password = "".join(password)
     password_entry.insert(0,final_password)
 def add(): 
-    website = website_entry.get()
-    user_name = email_entry.get()
-    password = password_entry.get()
-    with open("password.txt","a") as file:
-        file.write(f"\n{website}|{user_name}|{password}")
-
-
+    answer = messagebox.askyesno("Comfirmation","Are u sure u want to save the password")
+    if answer:
+        website = website_entry.get()
+        user_name = email_entry.get()
+        password = password_entry.get()
+        with open("password.txt","a") as file:
+            file.write(f"\n{website}|{user_name}|{password}")
+    else:
+        return 
 generate_btn = Button(text = "Generate",command = generator)
 generate_btn.grid(row=3,column=2,columnspan=2,padx=(1,10),pady=10)
 add_btn = Button(text = "add",width=30,command=add)
