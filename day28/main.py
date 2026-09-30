@@ -1,5 +1,5 @@
-from tkinter import *
 import math
+from tkinter import *
 
 PINK = "#FFC0CB"
 RED = "#FF0000"

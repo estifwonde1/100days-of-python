@@ -1,10 +1,10 @@
+import json
 import random
 import string
 from tkinter import *
 from tkinter import messagebox
-import pyperclip
-import json
 
+import pyperclip
 
 rand_num = random.randint(1, 100)
 letters = list(string.ascii_letters)
