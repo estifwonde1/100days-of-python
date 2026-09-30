@@ -48,6 +48,8 @@ def add():
         if answer:  
             with open("password.txt","a") as file:
                 file.write(f"\n{website}|{user_name}|{password}")
+                website_entry.delete(0,end)
+                password_entry.delete(0,end)
             pyperclip.copy(password)
         else:
             return 

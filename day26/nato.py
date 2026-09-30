@@ -7,7 +7,13 @@ print(new_dict)
 
 word = input("enter a word: ").upper()
 print(word)
-
-coded = [new_dict[letter] for letter in word]
-
-print(coded)
+while True:
+    try :
+        coded = [new_dict[letter] for letter in word]
+    except KeyError:
+        print("please enter words only")
+        word = input("enter a word: ").upper()
+    
+    else:
+        print(coded)
+        break
