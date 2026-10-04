@@ -11,6 +11,7 @@ wrong=PhotoImage(file="images/wrong.png")
 
 canvas = Canvas(width=700,height=400)
 canvas.create_image(700,400,image=front_card)
+canvas.grid(row=0,column=0)
 
 
 
