@@ -15,23 +15,24 @@ canvas.grid(row=0,column=1)
 timer_change = canvas.create_text(600,350, text ="00:00" ,fill="black",font=(FONT_NAME,35,"bold"))
 # timer.grid(row = 0, column=2)
 
-def click():
-    print("button clicked")
+def click_right():
+    count_down(5)
 
 def count_down(count):
     count_sec =  count %60
     if count_sec == 0:
         canvas.itemconfig(switch,image=back_card)
-    if count_sec > -1:
+    else:
+        canvas.itemconfig(switch,image=front_card)
+    if count_sec > 0:
         canvas.itemconfig(timer_change,text =f"{count_sec}")
         window.after(1000,count_down,count-1)
         print("worked")
-    else:
-        count_down(5)
+   
 count_down(5)
 
 
-right_button = Button(image = right,command=click,bd=0)
+right_button = Button(image = right,command=click_right,bd=0)
 right_button.grid(row=5,column=0)
 wrong_button = Button(image = wrong)
 wrong_button.grid(row=5,column=2)
