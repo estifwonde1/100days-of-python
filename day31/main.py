@@ -1,7 +1,6 @@
 from tkinter import *
-import math
-
-
+import random
+import pandas as pd 
 FONT_NAME = "Courier"
 window = Tk()
 window.title("Flash Card")
@@ -16,6 +15,8 @@ timer_change = canvas.create_text(600,350, text ="00:00" ,fill="black",font=(FON
 # timer.grid(row = 0, column=2)
 
 def click_right():
+    count_down(5)
+def click_wrong():
     count_down(5)
 
 def count_down(count):
@@ -34,7 +35,7 @@ count_down(5)
 
 right_button = Button(image = right,command=click_right,bd=0)
 right_button.grid(row=5,column=0)
-wrong_button = Button(image = wrong)
+wrong_button = Button(image = wrong,command=click_wrong,bd=0)
 wrong_button.grid(row=5,column=2)
 
 
