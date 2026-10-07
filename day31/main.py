@@ -2,6 +2,9 @@ from tkinter import *
 import random
 import pandas as pd 
 FONT_NAME = "Courier"
+
+with open("/data/commom_french_words.csv") as file:
+    data = file.read()
 window = Tk()
 window.title("Flash Card")
 front_card = PhotoImage(file="images/frontpage.png")
