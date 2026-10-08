@@ -1,9 +1,9 @@
 from tkinter import *
 import random
 import pandas as pd 
-FONT_NAME = "Courier"
-
-with open("/data/commom_french_words.csv") as file:
+FONT_NAME = ("arial",40,"italic")
+BACKGROUND_COLOR = "#B1DDC6"
+with open("data/common_french_words.csv") as file:
     data = file.read()
 window = Tk()
 window.title("Flash Card")
@@ -13,6 +13,9 @@ right=PhotoImage(file="images/right.png")
 wrong=PhotoImage(file="images/wrong.png")
 canvas = Canvas(width=700,height=400)
 switch = canvas.create_image(350,200,image=front_card)
+canvas.create_text(350,30, text= "Title",font = FONT_NAME )
+canvas.create_text(350,200, text= "Card", font= FONT_NAME)
+canvas.config(bg=BACKGROUND_COLOR, highlightthickness= 0)
 canvas.grid(row=0,column=1)
 timer_change = canvas.create_text(600,350, text ="00:00" ,fill="black",font=(FONT_NAME,35,"bold"))
 # timer.grid(row = 0, column=2)
