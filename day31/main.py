@@ -1,6 +1,8 @@
 from tkinter import *
 import random
 import pandas as pd 
+import json
+
 FONT_NAME = ("arial",40,"italic")
 BACKGROUND_COLOR = "#B1DDC6"
 with open("data/common_french_words.csv") as file:
