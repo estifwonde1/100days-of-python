@@ -1,201 +1,201 @@
-﻿#,French Word,English Translation,Part of Speech
-1,bonjour,hello / good morning,Greeting
-2,bonsoir,good evening,Greeting
-3,salut,hi / bye (informal),Greeting
-4,au revoir,goodbye,Greeting
-5,merci,thank you,Expression
-6,s'il vous plaît,please (formal),Expression
-7,s'il te plaît,please (informal),Expression
-8,oui,yes,Particle
-9,non,no,Particle
-10,pardon,sorry / excuse me,Expression
-11,d'accord,okay / agreed,Expression
-12,de rien,you're welcome,Expression
-13,bienvenue,welcome,Expression
-14,désolé,sorry,Adjective
-15,le,the (masculine singular),Article
-16,la,the (feminine singular),Article
-17,les,the (plural),Article
-18,un,a / an / one (masculine),Article
-19,une,a / an / one (feminine),Article
-20,des,some (plural article),Article
-21,ce,this / that (masculine),Determiner
-22,cette,this / that (feminine),Determiner
-23,ces,these / those,Determiner
-24,mon,my (masculine),Determiner
-25,ma,my (feminine),Determiner
-26,mes,my (plural),Determiner
-27,ton,"your (informal, masculine)",Determiner
-28,ta,"your (informal, feminine)",Determiner
-29,tes,"your (informal, plural)",Determiner
-30,son,his / her / its (masculine),Determiner
-31,sa,his / her / its (feminine),Determiner
-32,ses,his / her / its (plural),Determiner
-33,notre,our,Determiner
-34,nos,our (plural),Determiner
-35,votre,your (formal/plural),Determiner
-36,vos,"your (formal/plural, plural)",Determiner
-37,leur,their,Determiner
-38,leurs,their (plural),Determiner
-39,chaque,each / every,Determiner
-40,je,I,Pronoun
-41,tu,you (informal),Pronoun
-42,il,he / it,Pronoun
-43,elle,she / it,Pronoun
-44,on,we / one / people,Pronoun
-45,nous,we / us,Pronoun
-46,vous,you (formal/plural),Pronoun
-47,ils,they (masculine/mixed),Pronoun
-48,elles,they (feminine),Pronoun
-49,me,me / myself,Pronoun
-50,te,you / yourself,Pronoun
-51,se,himself / herself / itself / themselves,Pronoun
-52,lui,him / her,Pronoun
-53,moi,me,Pronoun
-54,toi,you,Pronoun
-55,qui,who / which,Pronoun
-56,que,that / what,Pronoun
-57,quoi,what,Pronoun
-58,où,where,Adverb/Pronoun
-59,quand,when,Adverb/Conjunction
-60,comment,how,Adverb
-61,pourquoi,why,Adverb
-62,combien,how much / how many,Adverb
-63,à,to / at / in,Preposition
-64,de,of / from,Preposition
-65,dans,in / inside,Preposition
-66,en,in / by / on,Preposition
-67,sur,on / upon,Preposition
-68,sous,under,Preposition
-69,avec,with,Preposition
-70,sans,without,Preposition
-71,pour,for / in order to,Preposition
-72,par,by / through,Preposition
-73,entre,between,Preposition
-74,vers,towards,Preposition
-75,chez,at the house/place of,Preposition
-76,et,and,Conjunction
-77,mais,but,Conjunction
-78,ou,or,Conjunction
-79,donc,so / therefore,Conjunction
-80,car,because / for,Conjunction
-81,ni,neither / nor,Conjunction
-82,si,if / so,Conjunction
-83,comme,like / as,Conjunction
-84,ne,not (first part of negation),Adverb
-85,pas,not,Adverb
-86,plus,more,Adverb
-87,moins,less,Adverb
-88,très,very,Adverb
-89,bien,well,Adverb
-90,mal,badly,Adverb
-91,aussi,also / too,Adverb
-92,toujours,always / still,Adverb
-93,jamais,never,Adverb
-94,souvent,often,Adverb
-95,parfois,sometimes,Adverb
-96,maintenant,now,Adverb
-97,aujourd'hui,today,Adverb
-98,hier,yesterday,Adverb
-99,demain,tomorrow,Adverb
-100,déjà,already,Adverb
-101,encore,again / still,Adverb
-102,ici,here,Adverb
-103,là,there,Adverb
-104,beaucoup,a lot / much,Adverb
-105,peu,little / few,Adverb
-106,trop,too much,Adverb
-107,assez,enough,Adverb
-108,être,to be,Verb
-109,avoir,to have,Verb
-110,faire,to do / to make,Verb
-111,dire,to say / to tell,Verb
-112,aller,to go,Verb
-113,voir,to see,Verb
-114,savoir,to know (a fact/how to),Verb
-115,pouvoir,to be able to / can,Verb
-116,vouloir,to want,Verb
-117,venir,to come,Verb
-118,prendre,to take,Verb
-119,croire,to believe,Verb
-120,aimer,to love / to like,Verb
-121,parler,to speak / to talk,Verb
-122,donner,to give,Verb
-123,falloir,to be necessary,Verb
-124,devoir,must / to have to,Verb
-125,trouver,to find,Verb
-126,mettre,to put,Verb
-127,demander,to ask,Verb
-128,tenir,to hold,Verb
-129,sembler,to seem,Verb
-130,laisser,to leave / to let,Verb
-131,penser,to think,Verb
-132,entendre,to hear,Verb
-133,regarder,to look at / to watch,Verb
-134,répondre,to answer,Verb
-135,rendre,to return / to render,Verb
-136,connaître,to know (someone/place),Verb
-137,comprendre,to understand,Verb
-138,attendre,to wait,Verb
-139,sortir,to go out / to leave,Verb
-140,arriver,to arrive,Verb
-141,partir,to leave / to depart,Verb
-142,passer,to pass / to spend time,Verb
-143,appeler,to call,Verb
-144,écrire,to write,Verb
-145,lire,to read,Verb
-146,travailler,to work,Verb
-147,acheter,to buy,Verb
-148,manger,to eat,Verb
-149,boire,to drink,Verb
-150,dormir,to sleep,Verb
-151,vivre,to live,Verb
-152,chercher,to search / to look for,Verb
-153,ouvrir,to open,Verb
-154,fermer,to close,Verb
-155,temps,time / weather,Noun
-156,jour,day,Noun
-157,nuit,night,Noun
-158,matin,morning,Noun
-159,soir,evening,Noun
-160,heure,hour / time,Noun
-161,minute,minute,Noun
-162,an,year,Noun
-163,année,year (duration),Noun
-164,semaine,week,Noun
-165,mois,month,Noun
-166,moment,moment,Noun
-167,fois,time (instance),Noun
-168,homme,man,Noun
-169,femme,woman / wife,Noun
-170,enfant,child,Noun
-171,ami,friend (masculine),Noun
-172,amie,friend (feminine),Noun
-173,famille,family,Noun
-174,père,father,Noun
-175,mère,mother,Noun
-176,fils,son,Noun
-177,fille,daughter / girl,Noun
-178,frère,brother,Noun
-179,sœur,sister,Noun
-180,personne,person / nobody,Noun
-181,gens,people,Noun
-182,monde,world,Noun
-183,pays,country,Noun
-184,ville,city / town,Noun
-185,maison,house / home,Noun
-186,rue,street,Noun
-187,eau,water,Noun
-188,terre,earth / land / soil,Noun
-189,ciel,sky,Noun
-190,soleil,sun,Noun
-191,mer,sea,Noun
-192,lieu,place,Noun
-193,endroit,place / spot,Noun
-194,vie,life,Noun
-195,chose,thing,Noun
-196,nom,name,Noun
-197,mot,word,Noun
-198,travail,work / job,Noun
-199,livre,book,Noun
-200,porte,door,Noun
+﻿French,Word
+bonjour,hello
+bonsoir,goodevening
+salut,hi
+aurevoir,goodbye
+merci,thankyou
+s'ilvousplaît,please(formal)
+s'ilteplaît,please(informal)
+oui,yes
+non,no
+pardon,sorry/excuseme
+d'accord,okay/agreed
+derien,you'rewelcome
+bienvenue,welcome
+désolé,sorry
+let,he(masculinesingular)
+lat,he(femininesingular)
+les,the(plural)
+una/an/,one(masculine)
+unea/an/,one(feminine)
+des,some(plural)
+cet,his/that(masculine)
+cette,this/that(feminine)
+ces,these/those
+mon,my(masculine)
+ma,my(feminine)
+mes,my(plural)
+ton,"your(informalmasculine)"
+ta,"your(informalfeminine)"
+tes,"your(informalplural)"
+son,his/her/its(masculine)
+sah,is/her/its(feminine)
+sesh,is/her/its(plural)
+notre,our
+nos,our(plural)
+votre,your(formal/plural)
+vos,"your(formal/pluralplural)"
+leur,their
+leurs,their(plural)
+chaque,each/every
+je,I
+tuy,ou(informal)
+il,he/it
+ell,eshe/it
+onwe,/one/people
+nouswe,/us
+vous,you(formal/plural)
+il,sthey(masculine/mixed)
+elles,they(feminine)
+me,me/myself
+te,you/yourself
+se,himself/herself/itself/themselves
+lui,him/her
+moi,me
+toi,you
+qui,who/which
+que,that/what
+quoi,what
+où,where
+qu,andwhen
+comment,how
+pourquoi,why
+combien,howmuch/howmany
+àto,/at/in
+deof,/from
+dans,in/inside
+enin,/by/on
+suron,/upon
+sous,under
+avec,with
+sans,without
+pour,for/inorderto
+par,by/through
+entre,between
+vers,towards
+chezat,thehouse/placeof
+et,and
+mais,but
+ou,or
+donc,so/therefore
+car,because/for
+ni,neither/nor
+si,if/so
+comme,like/as
+ne,not(firstpartofnegation)
+pas,not
+plus,more
+moins,less
+très,very
+bie,nwell
+mal,badly
+aussi,also/too
+touj,oursalways/still
+jama,isnever
+souvent,often
+parfois,sometimes
+maintenant,now
+aujourd'hui,today
+hier,yesterday
+demain,tomorrow
+déjà,already
+encore,again/still
+ici,here
+làt,here
+beaucoup,alot/much
+peu,little/few
+trop,toomuch
+assez,enough
+être,tobe
+avoir,tohave
+faire,todo/tomake
+dire,tosay/totell
+aller,togo
+voir,tosee
+savoir,toknow(afact/howto)
+pouvoir,tobeableto/can
+vouloir,towant
+venir,tocome
+prendre,totake
+croire,tobelieve
+aimer,tolove/tolike
+parler,tospeak/totalk
+donner,togive
+falloir,tobenecessary
+devoir,must/tohaveto
+trouver,tofind
+mettre,toput
+demander,toask
+tenir,tohold
+sembler,toseem
+laisser,toleave/tolet
+penser,tothink
+entendre,tohear
+regarder,tolookat/towatch
+répondre,toanswer
+rendre,toreturn/torender
+connaître,toknow(someone/place)
+comprendre,tounderstand
+attendre,towait
+sortir,togoout/toleave
+arriver,toarrive
+partir,toleave/todepart
+passer,topass/tospendtime
+appeler,tocall
+écrire,towrite
+lire,toread
+travailler,towork
+acheter,tobuy
+manger,toeat
+boiret,odrink
+dormir,tosleep
+vivre,tolive
+chercher,tosearch/tolookfor
+ouvrir,toopen
+fermer,toclose
+temps,time/weather
+jour,day
+nuit,night
+matin,morning
+soir,evening
+heure,hour/time
+minute,minute
+an,year
+année,year(duration)
+semaine,week
+mois,month
+moment,moment
+fois,time(instance)
+homme,man
+femmew,oman/wife
+enfant,child
+ami,friend(masculine)
+amie,friend(feminine)
+famille,family
+père,father
+mère,mother
+fils,son
+fille,daughter/girl
+frère,brother
+sœur,sister
+personne,person/nobody
+gens,people
+monde,world
+pays,country
+ville,city/town
+maison,house/home
+rue,street
+eau,water
+terre,earth/land/soil
+ciel,sky
+soleil,sun
+mer,sea
+lieu,place
+endroit,place/spot
+vie,life
+chose,thing
+nom,name
+mot,word
+travail,work/job
+livre,book
+porte,door
