@@ -13,10 +13,7 @@ data = pd.read_csv("data/french_words.csv")
 to_learn = data.to_dict(orient = "records")
 num = len(to_learn)
 ind = random.randint(0,num-1) 
-global current
 current = to_learn[ind]
-
-print(to_learn)
 window = Tk()
 window.title("Flash Card")
 front_card = PhotoImage(file="images/frontpage.png")
