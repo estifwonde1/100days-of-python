@@ -1,6 +1,7 @@
 from tkinter import *
 import random
 import pandas as pd 
+import os
 import json
 
 FONT_NAME = ("arial",25,"italic")
@@ -31,21 +32,19 @@ timer_change = canvas.create_text(600,350, text ="00:00" ,fill="black",font=(FON
 
 def click_right():
     ind = random.randint(0,num-1) 
-    print(ind)
     global current
     current = to_learn[ind]
-    print(current)
     canvas.itemconfig(card_name, text =f"{current["French"]}")
-    print(current)
     count_down(5)
-# def click_wrong():
-#     count_down(5)
+def click_wrong():
+    global current
+    df = pd.DataFrame([current])
+    file_exists = os.path.isfile("data/words_to_review.csv")
+    df.to_csv("data/words_to_review.csv",mode = "a",index = False, header = not file_exists)
+    click_right()
 
 def count_down(count):
     global current
-    
-
-
     count_sec =  count %60
     if count_sec == 0:
         canvas.itemconfig(switch,image=back_card)
@@ -57,13 +56,16 @@ def count_down(count):
         canvas.itemconfig(timer_change,text =f"{count_sec}")
         window.after(1000,count_down,count-1)
         print("worked")
+
+
+
    
 count_down(5)
 
 
 right_button = Button(image = right,command=click_right,bd=0)
 right_button.grid(row=5,column=0)
-wrong_button = Button(image = wrong,command=click_right,bd=0)
+wrong_button = Button(image = wrong,command=click_wrong,bd=0)
 wrong_button.grid(row=5,column=2)
 
 
