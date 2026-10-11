@@ -12,6 +12,9 @@ with open("data/common_french_words.csv") as file:
 data = pd.read_csv("data/french_words.csv")
 to_learn = data.to_dict(orient = "records")
 num = len(to_learn)
+ind = random.randint(0,num-1) 
+global current
+current = to_learn[ind]
 
 print(to_learn)
 window = Tk()
@@ -23,7 +26,7 @@ wrong=PhotoImage(file="images/wrong.png")
 canvas = Canvas(width=700,height=400)
 switch = canvas.create_image(350,200,image=front_card)
 canvas.create_text(350,30, text= "Title",font = FONT_NAME )
-card_name = canvas.create_text(350,200, text= "Card", font= FONT_NAME)
+card_name = canvas.create_text(350,200, text =f"{current["French"]}", font= FONT_NAME)
 canvas.config(bg=BACKGROUND_COLOR, highlightthickness= 0)
 canvas.grid(row=0,column=1)
 timer_change = canvas.create_text(600,350, text ="00:00" ,fill="black",font=(FONT_NAME,35,"bold"))
@@ -52,7 +55,7 @@ def count_down(count):
     if count_sec > 0:
         canvas.itemconfig(timer_change,text =f"{count_sec}")
         window.after(1000,count_down,count-1)
-        print("worked")
+   
 
 
 
