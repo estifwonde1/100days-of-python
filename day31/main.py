@@ -7,8 +7,8 @@ FONT_NAME = ("arial",25,"italic")
 BACKGROUND_COLOR = "#B1DDC6"
 with open("data/common_french_words.csv") as file:
     data = file.read()
-data = pd.read_csv("data/common_french_words.csv")
-to_learn = data.to_dict(orient="records")
+data = pd.read_csv("data/french_words.csv")
+to_learn = data.to_dict()
 print(to_learn)
 window = Tk()
 window.title("Flash Card")
@@ -26,8 +26,11 @@ timer_change = canvas.create_text(600,350, text ="00:00" ,fill="black",font=(FON
 # timer.grid(row = 0, column=2)
 
 def click_right():
-    current = random.choice(to_learn(0))
+    ind = random.randint(0,101)
+    print(ind)
+    current = random.choice(to_learn["French"])
     canvas.itemconfig(card_name, text =f"{current}")
+    print(current)
 #     count_down(5)
 # def click_wrong():
 #     count_down(5)
