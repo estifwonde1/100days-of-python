@@ -5,10 +5,13 @@ import json
 
 FONT_NAME = ("arial",25,"italic")
 BACKGROUND_COLOR = "#B1DDC6"
+
 with open("data/common_french_words.csv") as file:
     data = file.read()
 data = pd.read_csv("data/french_words.csv")
-to_learn = data.to_dict()
+to_learn = data.to_dict(orient = "records")
+num = len(to_learn)
+
 print(to_learn)
 window = Tk()
 window.title("Flash Card")
@@ -25,20 +28,29 @@ canvas.grid(row=0,column=1)
 timer_change = canvas.create_text(600,350, text ="00:00" ,fill="black",font=(FONT_NAME,35,"bold"))
 # timer.grid(row = 0, column=2)
 
+
 def click_right():
-    ind = random.randint(0,101)
+    ind = random.randint(0,num-1) 
     print(ind)
-    current = random.choice(to_learn["French"])
-    canvas.itemconfig(card_name, text =f"{current}")
+    global current
+    current = to_learn[ind]
     print(current)
-#     count_down(5)
+    canvas.itemconfig(card_name, text =f"{current["French"]}")
+    print(current)
+    count_down(5)
 # def click_wrong():
 #     count_down(5)
 
 def count_down(count):
+    global current
+    
+
+
     count_sec =  count %60
     if count_sec == 0:
         canvas.itemconfig(switch,image=back_card)
+        canvas.itemconfig(card_name, text=f"{current["English"]}")
+        
     else:
         canvas.itemconfig(switch,image=front_card)
     if count_sec > 0:
