@@ -1,8 +1,8 @@
-from tkinter import *
-import random
-import pandas as pd 
 import os
-import json
+import random
+from tkinter import *
+
+import pandas as pd
 
 FONT_NAME = ("arial",25,"italic")
 BACKGROUND_COLOR = "#B1DDC6"
@@ -37,19 +37,16 @@ def click_right():
     canvas.itemconfig(card_name, text =f"{current["French"]}")
     count_down(5)
 def click_wrong():
-    global current
     df = pd.DataFrame([current])
     file_exists = os.path.isfile("data/words_to_review.csv")
     df.to_csv("data/words_to_review.csv",mode = "a",index = False, header = not file_exists)
     click_right()
 
 def count_down(count):
-    global current
     count_sec =  count %60
     if count_sec == 0:
         canvas.itemconfig(switch,image=back_card)
-        canvas.itemconfig(card_name, text=f"{current["English"]}")
-        
+        canvas.itemconfig(card_name, text=f"{current["English"]}")       
     else:
         canvas.itemconfig(switch,image=front_card)
     if count_sec > 0:
