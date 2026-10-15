@@ -4,7 +4,7 @@ import datetime
 
 my_email = "estifwonde211@gmail.com"
 password = "21130328@Estif"
-with smtplib.SMTP("smtp.gmail.com") as connection:
+with smtplib.SMTP("smtp.gmail.com",587) as connection:
 
     connection.starttls()
     connection.login(user = my_email , password=password)
