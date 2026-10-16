@@ -1,7 +1,7 @@
 import smtplib
 import datetime
 
-
+#what is the issue with this emailsmtlib
 my_email = "estifwonde211@gmail.com"
 password = "21130328@Estif"
 with smtplib.SMTP("smtp.gmail.com",587) as connection:
