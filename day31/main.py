@@ -53,9 +53,6 @@ def count_down(count):
         canvas.itemconfig(timer_change,text =f"{count_sec}")
         window.after(1000,count_down,count-1)
    
-
-
-
    
 count_down(5)
 
