@@ -17,6 +17,8 @@ while bruh:
     n=+1
     if n >= 20:
         bruh = False
+class Boy:
+    
 
     
     
