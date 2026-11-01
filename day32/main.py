@@ -22,9 +22,9 @@ while bruh:
         
 st = [1,4,2,7,3]
 
-for i in range st :
+for i in range st:
     if st[i] < st[i+1]:
         st [0] = st[i]
 
-
+for
     
