@@ -5,3 +5,6 @@ import datetime
 import math
 x
 n 
+while true:
+    print("another streak extender")
+
