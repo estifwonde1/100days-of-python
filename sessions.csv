@@ -1,0 +1,108 @@
+Date,Start,Stop,Interruption (min),Job #,Phase,Comments
+2026-08-08,19:18,19:18,,P3,Beginner console programs,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-08-09,09:49,09:49,,P3,Beginner console programs,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-08-09,12:09,14:35,,P3,Beginner console programs,Reconstructed from git timestamps (lower bound)
+2026-08-10,09:12,09:46,,P3,Beginner console programs,Reconstructed from git timestamps (lower bound)
+2026-08-13,12:41,18:23,,P3,Beginner console programs,Reconstructed from git timestamps (lower bound)
+2026-08-14,14:51,15:17,,P3,Beginner console programs,Reconstructed from git timestamps (lower bound)
+2026-08-15,10:24,11:40,,P3,Beginner console programs,Reconstructed from git timestamps (lower bound)
+2026-08-16,20:12,20:29,,P3,Beginner console programs,Reconstructed from git timestamps (lower bound)
+2026-08-17,12:57,14:13,,P3,Beginner console programs,Reconstructed from git timestamps (lower bound)
+2026-08-17,19:33,20:11,,P3,Beginner console programs,Reconstructed from git timestamps (lower bound)
+2026-08-18,00:16,00:16,,P3,Beginner console programs,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-08-18,14:31,14:31,,P3,Beginner console programs,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-08-18,19:01,19:50,,P3,Beginner console programs,Reconstructed from git timestamps (lower bound)
+2026-08-19,12:08,12:39,,P3,Beginner console programs,Reconstructed from git timestamps (lower bound)
+2026-08-19,17:38,18:36,,P3,Beginner console programs,Reconstructed from git timestamps (lower bound)
+2026-08-19,22:39,23:28,,P3,Beginner console programs,Reconstructed from git timestamps (lower bound)
+2026-08-21,21:47,21:57,,P4,"Auction, calculator, blackjack, guessers, coffee machine",Reconstructed from git timestamps (lower bound)
+2026-08-22,17:24,19:31,,P4,"Auction, calculator, blackjack, guessers, coffee machine",Reconstructed from git timestamps (lower bound)
+2026-08-23,12:04,14:20,,P4,"Auction, calculator, blackjack, guessers, coffee machine",Reconstructed from git timestamps (lower bound)
+2026-08-23,19:42,19:42,,P4,"Auction, calculator, blackjack, guessers, coffee machine","SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-08-23,21:21,21:21,,P4,"Auction, calculator, blackjack, guessers, coffee machine","SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-08-24,22:30,22:57,,P4,"Auction, calculator, blackjack, guessers, coffee machine",Reconstructed from git timestamps (lower bound)
+2026-08-25,11:36,13:41,,P4,"Auction, calculator, blackjack, guessers, coffee machine",Reconstructed from git timestamps (lower bound)
+2026-08-25,18:08,19:00,,P4,"Auction, calculator, blackjack, guessers, coffee machine",Reconstructed from git timestamps (lower bound)
+2026-08-26,12:45,13:20,,P4,"Auction, calculator, blackjack, guessers, coffee machine",Reconstructed from git timestamps (lower bound)
+2026-08-26,16:22,19:42,,P4,"Auction, calculator, blackjack, guessers, coffee machine",Reconstructed from git timestamps (lower bound)
+2026-08-27,10:23,12:13,,P4,"Auction, calculator, blackjack, guessers, coffee machine",Reconstructed from git timestamps (lower bound)
+2026-08-28,15:24,16:49,,P4,"Auction, calculator, blackjack, guessers, coffee machine",Reconstructed from git timestamps (lower bound)
+2026-08-28,17:14,17:14,,P5,OOP quiz app and turtle graphics,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-08-29,08:32,09:02,,P5,OOP quiz app and turtle graphics,Reconstructed from git timestamps (lower bound)
+2026-08-29,18:21,18:56,,P5,OOP quiz app and turtle graphics,Reconstructed from git timestamps (lower bound)
+2026-08-29,20:44,20:44,,P5,OOP quiz app and turtle graphics,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-08-30,09:23,09:23,,P5,OOP quiz app and turtle graphics,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-08-30,11:35,12:47,,P5,OOP quiz app and turtle graphics,Reconstructed from git timestamps (lower bound)
+2026-08-30,14:21,14:21,,P5,OOP quiz app and turtle graphics,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-08-31,11:53,12:21,,P5,OOP quiz app and turtle graphics,Reconstructed from git timestamps (lower bound)
+2026-08-31,15:14,15:14,,P5,OOP quiz app and turtle graphics,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-01,09:30,09:30,,P5,OOP quiz app and turtle graphics,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-01,21:28,21:36,,P5,OOP quiz app and turtle graphics,Reconstructed from git timestamps (lower bound)
+2026-09-02,12:03,12:03,,P5,OOP quiz app and turtle graphics,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-02,19:42,21:13,,P5,OOP quiz app and turtle graphics,Reconstructed from git timestamps (lower bound)
+2026-09-03,09:42,09:42,,P5,OOP quiz app and turtle graphics,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-03,22:26,22:44,,P5,OOP quiz app and turtle graphics,Reconstructed from git timestamps (lower bound)
+2026-09-04,12:04,12:47,,P5,OOP quiz app and turtle graphics,Reconstructed from git timestamps (lower bound)
+2026-09-04,17:13,18:57,,P5,OOP quiz app and turtle graphics,Reconstructed from git timestamps (lower bound)
+2026-09-05,11:16,11:16,,P5,OOP quiz app and turtle graphics,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-06,14:23,14:23,,P5,OOP quiz app and turtle graphics,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-06,16:36,16:49,,P5,OOP quiz app and turtle graphics,Reconstructed from git timestamps (lower bound)
+2026-09-07,10:37,10:37,,P5,OOP quiz app and turtle graphics,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-08,11:54,11:54,,P5,OOP quiz app and turtle graphics,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-08,13:26,16:43,,P5,OOP quiz app and turtle graphics,Reconstructed from git timestamps (lower bound)
+2026-09-08,17:04,17:04,,P6,Snake game,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-09,00:06,00:06,,P6,Snake game,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-09,19:06,20:31,,P6,Snake game,Reconstructed from git timestamps (lower bound)
+2026-09-10,10:58,10:58,,P6,Snake game,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-10,14:48,16:00,,P6,Snake game,Reconstructed from git timestamps (lower bound)
+2026-09-11,11:32,11:38,,P6,Snake game,Reconstructed from git timestamps (lower bound)
+2026-09-12,19:55,21:11,,P6,Snake game,Reconstructed from git timestamps (lower bound)
+2026-09-13,10:15,10:15,,P6,Snake game,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-14,12:04,15:16,,P6,Snake game,Reconstructed from git timestamps (lower bound)
+2026-09-14,18:38,18:44,,P6,Snake game,Reconstructed from git timestamps (lower bound)
+2026-09-14,21:08,21:08,,P6,Snake game,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-15,11:45,11:45,,P6,Snake game,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-15,19:24,20:13,,P6,Snake game,Reconstructed from git timestamps (lower bound)
+2026-09-16,15:44,16:02,,P7,Pong and Crossing road,Reconstructed from git timestamps (lower bound)
+2026-09-16,22:01,22:22,,P7,Pong and Crossing road,Reconstructed from git timestamps (lower bound)
+2026-09-17,10:36,12:13,,P7,Pong and Crossing road,Reconstructed from git timestamps (lower bound)
+2026-09-18,11:02,11:52,,P7,Pong and Crossing road,Reconstructed from git timestamps (lower bound)
+2026-09-18,13:49,13:49,,P7,Pong and Crossing road,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-18,16:24,16:24,,P7,Pong and Crossing road,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-19,11:53,11:53,,P8,States quiz and NATO app,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-19,15:26,15:30,,P8,States quiz and NATO app,Reconstructed from git timestamps (lower bound)
+2026-09-20,11:28,11:28,,P8,States quiz and NATO app,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-20,13:22,13:47,,P8,States quiz and NATO app,Reconstructed from git timestamps (lower bound)
+2026-09-20,16:06,16:06,,P8,States quiz and NATO app,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-21,00:04,00:04,,P8,States quiz and NATO app,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-22,11:18,11:18,,P8,States quiz and NATO app,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-23,18:53,18:53,,P8,States quiz and NATO app,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-24,10:22,10:22,,P8,States quiz and NATO app,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-24,16:05,16:05,,P8,States quiz and NATO app,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-24,19:06,19:06,,P8,States quiz and NATO app,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-25,09:07,09:07,,P9,Pomodoro and password manager,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-25,18:51,18:51,,P9,Pomodoro and password manager,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-26,11:08,11:57,,P9,Pomodoro and password manager,Reconstructed from git timestamps (lower bound)
+2026-09-27,14:11,14:11,,P9,Pomodoro and password manager,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-28,19:15,19:29,,P9,Pomodoro and password manager,Reconstructed from git timestamps (lower bound)
+2026-09-29,13:01,13:50,,P9,Pomodoro and password manager,Reconstructed from git timestamps (lower bound)
+2026-09-29,17:21,19:46,,P9,Pomodoro and password manager,Reconstructed from git timestamps (lower bound)
+2026-09-30,14:46,15:34,,P9,Pomodoro and password manager,Reconstructed from git timestamps (lower bound)
+2026-09-30,19:41,19:41,,P9,Pomodoro and password manager,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-09-30,23:30,00:07,,P9,Pomodoro and password manager,Reconstructed from git timestamps (lower bound)
+2026-10-02,20:08,20:08,,P10,Flashcard capstone,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-10-03,15:56,16:20,,P10,Flashcard capstone,Reconstructed from git timestamps (lower bound)
+2026-10-04,21:47,21:47,,P10,Flashcard capstone,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-10-05,18:23,18:33,,P10,Flashcard capstone,Reconstructed from git timestamps (lower bound)
+2026-10-05,20:24,21:03,,P10,Flashcard capstone,Reconstructed from git timestamps (lower bound)
+2026-10-06,21:32,21:32,,P10,Flashcard capstone,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-10-07,23:42,23:42,,P10,Flashcard capstone,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-10-08,18:56,18:56,,P10,Flashcard capstone,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-10-09,22:23,22:23,,P10,Flashcard capstone,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-10-10,21:31,21:31,,P10,Flashcard capstone,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-10-11,16:47,18:20,,P10,Flashcard capstone,Reconstructed from git timestamps (lower bound)
+2026-10-12,17:57,17:57,,P11,Email automation,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-10-13,17:59,17:59,,P11,Email automation,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-10-14,22:33,22:33,,P11,Email automation,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-10-15,22:47,22:47,,P11,Email automation,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
+2026-10-16,22:22,22:22,,P11,Email automation,"SINGLE COMMIT: duration unknown, add estimate from memory (label as estimated)"
