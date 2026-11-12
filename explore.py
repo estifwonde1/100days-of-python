@@ -53,3 +53,10 @@ if __name__ == "__main__":
     
     sorted_nums = bubble_sort(nums)
     print("Sorted list:  ", sorted_nums)
+some = randint(1,100)
+gott= True
+while gott:
+    if some =! 0:
+        print ("u need to sleep")
+    else:
+        gott = False
