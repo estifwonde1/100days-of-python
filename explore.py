@@ -60,3 +60,6 @@ while gott:
         print ("u need to sleep")
     else:
         gott = False
+
+while gott:
+    if some =!
