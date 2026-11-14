@@ -53,6 +53,21 @@ if __name__ == "__main__":
     
     sorted_nums = bubble_sort(nums)
     print("Sorted list:  ", sorted_nums)
+
+def insertion_sort(sorted):
+    for i in range(0,len(sorted-1)):
+        for j in range(1,len(sorted-1):
+            if sorted[i] < sorted[j]:
+               sorted[i] = sorted[i]
+            elif sorted[i] > sorted[j]:
+               sorted[i] = sorted[j]
+            else:
+                continue
+sorted = [1,7,9,5,8]
+insertion_sort(sorted)
+
+
+
 some = randint(1,100)
 gott= True
 while gott:
