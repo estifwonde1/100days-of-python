@@ -61,5 +61,11 @@ while gott:
     else:
         gott = False
 
-while gott:
-    if some =!
+for i in range(some):
+    m = i%2
+    if m == 0:
+        print (f"{m} is an even number")
+    else:
+        print(f"{m} that is odd i wonder why")
+
+
