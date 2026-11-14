@@ -63,6 +63,7 @@ def insertion_sort(sorted):
                sorted[i] = sorted[j]
             else:
                 continue
+    print(sorted)
 sorted = [1,7,9,5,8]
 insertion_sort(sorted)
 
