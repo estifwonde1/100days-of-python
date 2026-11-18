@@ -1,3 +1,4 @@
+import numphy
 import polar
 import turtle
 import pandas
