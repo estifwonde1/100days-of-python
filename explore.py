@@ -87,4 +87,5 @@ for i in range(some):
         print(f"{m} that is odd i wonder why")
 
 
-cdo
+def linkedlist(list):
+    node = list[0]
