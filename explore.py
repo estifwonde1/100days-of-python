@@ -86,6 +86,11 @@ for i in range(some):
     else:
         print(f"{m} that is odd i wonder why")
 
-
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+class LinkedList:
+    def __init__(self):
 def linkedlist(list):
     node = list[0]
