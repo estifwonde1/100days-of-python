@@ -133,5 +133,47 @@ class LinkedList:
             current = current.next
         print(" -> ".join(elements) + " -> None")
 
-def linkedlist(list):
-    node = list[0]
+def counting_sort_by_digit(arr, exp):
+    n = len(arr)
+    output = [0] * n
+    count = [0] * 10  # Base-10 digits (0-9)
+
+    # Count occurrences of each digit at the current place value
+    for num in arr:
+        digit = (num // exp) % 10
+        count[digit] += 1
+
+    # Convert counts to cumulative indices for stable placement
+    for i in range(1, 10):
+        count[i] += count[i - 1]
+
+    # Build output array in reverse to preserve stability
+    for i in range(n - 1, -1, -1):
+        digit = (arr[i] // exp) % 10
+        output[count[digit] - 1] = arr[i]
+        count[digit] -= 1
+
+    # Copy sorted elements back into original list
+    for i in range(n):
+        arr[i] = output[i]
+
+
+def radix_sort(arr):
+    if not arr:
+        return arr
+
+    max_val = max(arr)
+    exp = 1  # Start at the 1s place (10^0)
+
+    while max_val // exp > 0:
+        counting_sort_by_digit(arr, exp)
+        exp *= 10
+
+    return arr
+
+
+# Example usage
+nums = [170, 45, 75, 90, 802, 24, 2, 66]
+print(radix_sort(nums))
+# Output: [2, 24, 45, 66, 75, 90, 170, 802]
+
