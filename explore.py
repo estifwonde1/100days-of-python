@@ -177,3 +177,83 @@ nums = [170, 45, 75, 90, 802, 24, 2, 66]
 print(radix_sort(nums))
 # Output: [2, 24, 45, 66, 75, 90, 170, 802]
 
+class Node:
+    def __init__(self, key):
+        self.key = key
+        self.left = None
+        self.right = None
+
+class BinarySearchTree:
+    def __init__(self):
+        self.root = None
+
+    def insert(self, key):
+        self.root = self._insert_recursive(self.root, key)
+
+    def _insert_recursive(self, node, key):
+        if node is None:
+            return Node(key)
+        if key < node.key:
+            node.left = self._insert_recursive(node.left, key)
+        elif key > node.key:
+            node.right = self._insert_recursive(node.right, key)
+        return node
+
+    def search(self, key):
+        return self._search_recursive(self.root, key)
+
+    def _search_recursive(self, node, key):
+        if node is None or node.key == key:
+            return node is not None
+        if key < node.key:
+            return self._search_recursive(node.left, key)
+        return self._search_recursive(node.right, key)
+
+    def delete(self, key):
+        self.root = self._delete_recursive(self.root, key)
+
+    def _delete_recursive(self, node, key):
+        if node is None:
+            return None
+        if key < node.key:
+            node.left = self._delete_recursive(node.left, key)
+        elif key > node.key:
+            node.right = self._delete_recursive(node.right, key)
+        else:
+            # Case 1 & 2: Leaf node or single child
+            if node.left is None:
+                return node.right
+            elif node.right is None:
+                return node.left
+            # Case 3: Two children (replace with in-order successor)
+            successor = self._min_value_node(node.right)
+            node.key = successor.key
+            node.right = self._delete_recursive(node.right, successor.key)
+        return node
+
+    def _min_value_node(self, node):
+        current = node
+        while current.left is not None:
+            current = current.left
+        return current
+
+    def inorder(self):
+        result = []
+        self._inorder_recursive(self.root, result)
+        return result
+
+    def _inorder_recursive(self, node, result):
+        if node:
+            self._inorder_recursive(node.left, result)
+            result.append(node.key)
+            self._inorder_recursive(node.right, result)
+
+# Example Usage
+bst = BinarySearchTree()
+for value in [50, 30, 70, 20, 40, 60, 80]:
+    bst.insert(value)
+
+print(bst.inorder())   # Output: [20, 30, 40, 50, 60, 70, 80]
+print(bst.search(40))  # Output: True
+bst.delete(30)
+print(bst.inorder())   # Output: [20, 40, 50, 60, 70, 80]
