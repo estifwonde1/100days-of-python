@@ -257,3 +257,24 @@ print(bst.inorder())   # Output: [20, 30, 40, 50, 60, 70, 80]
 print(bst.search(40))  # Output: True
 bst.delete(30)
 print(bst.inorder())   # Output: [20, 40, 50, 60, 70, 80]
+import random
+
+def objective(x):
+    return (x - 3)**2 + 5
+
+# Search boundaries and iterations
+lower_bound, upper_bound = -10, 10
+iterations = 1000
+
+best_x = None
+best_score = float('inf')
+
+for _ in range(iterations):
+    candidate_x = random.uniform(lower_bound, upper_bound)
+    score = objective(candidate_x)
+    
+    if score < best_score:
+        best_score = score
+        best_x = candidate_x
+
+print(f"Best x found: {best_x:.4f}, Score: {best_score:.4f}")
