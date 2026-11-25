@@ -278,3 +278,41 @@ for _ in range(iterations):
         best_x = candidate_x
 
 print(f"Best x found: {best_x:.4f}, Score: {best_score:.4f}")
+def heapify(arr, n, i):
+    largest = i
+    left = 2 * i + 1
+    right = 2 * i + 2
+
+    # Check if left child exists and is greater than root
+    if left < n and arr[left] > arr[largest]:
+        largest = left
+
+    # Check if right child exists and is greater than largest so far
+    if right < n and arr[right] > arr[largest]:
+        largest = right
+
+    # Swap and continue heapifying if root is not the largest
+    if largest != i:
+        arr[i], arr[largest] = arr[largest], arr[i]
+        heapify(arr, n, largest)
+
+
+def heap_sort(arr):
+    n = len(arr)
+
+    # 1. Build a max-heap from the bottom up
+    for i in range(n // 2 - 1, -1, -1):
+        heapify(arr, n, i)
+
+    # 2. Extract elements one by one from the heap
+    for end in range(n - 1, 0, -1):
+        # Move current root (maximum) to the end
+        arr[0], arr[end] = arr[end], arr[0]
+        # Restore max-heap property on the reduced heap
+        heapify(arr, end, 0)
+
+
+# Example usage
+nums = [12, 11, 13, 5, 6, 7]
+heap_sort(nums)
+print(nums)  # Output: [5, 6, 7, 11, 12, 13]
